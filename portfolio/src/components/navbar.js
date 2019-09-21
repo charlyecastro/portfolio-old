@@ -8,25 +8,30 @@
 import React from "react"
 import { Link } from "gatsby"
 
+if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+}
+
 const Navbar = () => {
     return (
         <>
             <div style={{
                 display: "flex",
-                flex: 1,
+                flexGrow: 1,
                 justifyContent: "space-between",
                 marginTop: "1rem",
                 marginBottom: "1rem"
 
             }}>
-                <Link className = "linkStyle" style = {{color : "#000000", textDecoration : "none"}} to="/page-2/"> CC </Link> 
-                <div style = {{
+                <Link className="linkStyle" style={{ color: "#000000", textDecoration: "none", padding: ".5rem" }} to="/"> CC </Link>
+                <div style={{
                     justifyContent: "space-between"
-    
+
                 }}>
-                    <Link style = {{color : "#000000", textDecoration : "none"}} to="/page-2/">about </Link>
-                    <Link style = {{color : "#000000", textDecoration : "none"}} to="/page-2/">work </Link>
-                    <Link style = {{color : "#000000", textDecoration : "none"}} to="/page-2/">resume </Link>
+                    <Link style={{ color: "#000000", textDecoration: "none", padding: ".5rem" }} to="/#about">about </Link>
+                    <Link style={{ color: "#000000", textDecoration: "none", padding: ".5rem" }} to="/#work">work </Link>
+                    <Link style={{ color: "#000000", textDecoration: "none", padding: ".5rem" }} to="/page-2/">resume </Link>
                 </div>
             </div>
         </>

@@ -16,7 +16,8 @@ if (typeof window !== "undefined") {
 const Navbar = () => {
     return (
         <>
-            <div style={{
+        <div className = "contained">
+            <div  style={{
                 display: "flex",
                 flexGrow: 1,
                 justifyContent: "space-between",
@@ -24,35 +25,20 @@ const Navbar = () => {
                 marginBottom: "1rem"
 
             }}>
-                <Link className="linkStyle" style={{ color: "#000000", textDecoration: "none", padding: ".5rem" }} to="/"> CC </Link>
+                <Link smooth={true} className = "linkStyle" to="/"> CC </Link>
                 <div style={{
-                    justifyContent: "space-between"
+                    justifyContent: "space-between",
+                    alignSelf : "center"
 
                 }}>
-                    <Link style={{ color: "#000000", textDecoration: "none", padding: ".5rem" }} to="/#about">about </Link>
-                    <Link style={{ color: "#000000", textDecoration: "none", padding: ".5rem" }} to="/#work">work </Link>
-                    <Link style={{ color: "#000000", textDecoration: "none", padding: ".5rem" }} to="/page-2/">resume </Link>
+                    <Link className = "linkStyle" to="/#about">about </Link>
+                    <Link className = "linkStyle" to="/#work">work </Link>
+                    <Link className = "linkStyle" to="/resumePM.pdf/">resume </Link>
                 </div>
+            </div>
             </div>
         </>
     )
 }
-
-// const styles = StyleSheet.create({
-//     container: {
-//         maxWidth: 1024,
-//         display: "flex",
-//         flex: 1,
-//         justifyContent: "space-between"
-
-//     },
-//     title: {
-//         fontSize: 19,
-//         fontWeight: 'bold',
-//     },
-//     activeTitle: {
-//         color: 'red',
-//     },
-// });
 
 export default Navbar

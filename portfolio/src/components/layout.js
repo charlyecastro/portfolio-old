@@ -7,15 +7,14 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import Navbar from "./navbar"
 import 'bootstrap/dist/css/bootstrap.css';
 import "./layout.css"
 import Card from "../components/card"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import "../../node_modules/font-awesome/css/font-awesome.min.css"
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
@@ -24,7 +23,7 @@ if (typeof window !== "undefined") {
 
 const container = {
   margin: `0 auto`,
-  maxWidth: 960,
+  maxWidth: "960px",
   padding: `0px 1.0875rem 1.45rem`,
   paddingLeft: "3rem",
   paddingRight: "3rem"
@@ -57,11 +56,10 @@ const Layout = ({ children }) => {
   return (
     <>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <div style={container}>
+      <Navbar/>
         <main>{children}</main>
-      </div>
 
-      <section id= "work" style={{...workSection,}}>
+      {/* <section id= "work" style={{...workSection,}}>
         <div style={container}>
           <h4>Work</h4>
           <div className = "row" style ={{justifyContent : "center"}}>
@@ -73,8 +71,7 @@ const Layout = ({ children }) => {
             <Card />
           </div>
         </div>
-
-      </section>
+      </section> */}
 
       <div
         style={container}
@@ -84,7 +81,15 @@ const Layout = ({ children }) => {
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a> */}
           <p>Designed and built by Charlye Castro</p>
-          <FontAwesomeIcon icon={"falinkedin"} />
+          <Link to = "https://github.com/charlyecastro"> 
+          <i className = "fa fa-linkedin linkStyle"/>
+          </Link> 
+          <Link to = "https://github.com/charlyecastro"> 
+          <i className = "fa fa-github linkStyle"/>
+          </Link> 
+          <Link to = "https://github.com/charlyecastro"> 
+          <i className = "fa fa-envelope linkStyle"/>
+          </Link> 
         </footer>
       </div>
     </>

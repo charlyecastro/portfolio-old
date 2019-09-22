@@ -11,9 +11,45 @@ body {
 }
 
 .linkStyle {
-  color : "#000000";
-  text-decoration : "none";
-  font-family: Helvetica Neue, sans-serif;
+  color: #000000 ; 
+  text-decoration: none ;
+  padding: .5rem ;
+  transition : .5s;
+  opacity : 1
+
+}
+
+.linkStyle:hover {
+  color: #000000 ; 
+  text-decoration: none ;
+  padding: .5rem ;
+  opacity : .5
+}
+
+.workSection {
+  background-color: #FAFAFA;
+  width: "100%"
+}
+
+.contained {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0px 1.0875rem 1.45rem;
+  padding-left: 3rem;
+  padding-right: 3rem
+}
+
+.contact{
+  height: 100vh;
+  background: url("../images/Photos/blue.jpeg") no-repeat; 
+  background-size: cover;
+}
+
+.contactTitle {
+  background: url("../images/Photos/blue.jpeg") no-repeat; 
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 section {
@@ -416,7 +452,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 figure {
   margin-left: 0;

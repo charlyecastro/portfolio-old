@@ -12,16 +12,15 @@ const cardShadow = {
     boxShadow: "4px 14px 32px 6px rgba(0,0,0,0.21)"
 }
 
-const Card = () => {
+const Card = (props) => {
+    const backgroundImg = {
+        backgroundImage: `url(${props.img})`, backgroundSize: "cover", width: "100%", height: "100%"
+    }
     return (
         <>
-            {/* maxWidth : "100%", */}
-            <div className={"col col-md-5 col-sm-12"} style={{
-                boxShadow: "4px 14px 25px 6px rgba(0,0,0,0.05)", padding: "30px", backgroundColor: "#FFFFFF", borderRadius: "2%", margin: "1rem", width: "50vw", height: "50vh", position: "relative",
-                minHeight: "150px"
-            }}>
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                    <h2 >Limeade</h2>
+            <div className={"col col-md-5 col-sm-12 window"}>
+                <div className="windowText" style={{ display: "flex", flexDirection: "column" }}>
+                    <h2 className = "textImg" style={backgroundImg}>Limeade</h2>
                     <div style={{
                         position: "absolute",
                         bottom: 0,
@@ -32,6 +31,9 @@ const Card = () => {
                         <p>Mobile Developer Intern</p>
                     </div>
                 </div>
+                <div className="windowImg" style={backgroundImg}>
+                </div>
+
             </div>
         </>
     )

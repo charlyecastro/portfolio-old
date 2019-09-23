@@ -10,6 +10,51 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.textImg {
+  font-size: 3.5rem;
+  background-position: 0px 0px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.window {
+  box-shadow: 4px 14px 25px 6px rgba(0,0,0,0.05);
+  padding: 30px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  margin: 1rem;
+  width: 50vw;
+  height: 50vh;
+  position: "relative";
+  min-height: 150px;
+  transition : .5s
+}
+
+.windowImg {
+  width:100%;
+  box-shadow: 4px 14px 25px 6px rgba(0,0,0,0.05);
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* opacity: 0; */
+  background : #FFFFFF;
+  transition: 1s;
+  opacity: 0
+}
+
+.windowText {
+  opacity: 1
+}
+
+.window:hover > .windowImg{
+  opacity: 1
+}
+
+/* .window:hover ~ .windowText {
+  opacity: 0;
+} */
+
 .linkStyle {
   color: #000000 ; 
   text-decoration: none ;
@@ -50,6 +95,7 @@ body {
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 30px
 }
 
 section {
@@ -65,7 +111,7 @@ img {
   height: auto;
   border-style: none;
   height: auto;
-  border-radius: 2%;
+  border-radius: 5px;
   box-shadow: 4px 14px 32px 6px rgba(0,0,0,0.2);
 
 }
@@ -182,9 +228,36 @@ optgroup {
   font-weight: 700;
 }
 button,
-input {
-  overflow: visible;
+
+input:focus {
+  background-color: none;
 }
+
+input[type=text], textarea {
+  overflow: visible;
+  border-radius: 5px;
+  border: none;
+  background-color: #F7F7F7;
+  margin-bottom: 25px;
+  padding : 5px
+}
+
+input[type=submit] {
+  border-radius: 3px;
+  background-color: white;
+  padding : 10px;
+  border: .5px solid #373637;
+  transition: .5s
+}
+
+input[type=submit]:hover {
+  border-radius: 3px;
+  background-color: #373637;
+  padding : 10px;
+  border: .5px solid #373637;
+  color : white
+}
+
 button,
 select {
   text-transform: none;
@@ -472,7 +545,7 @@ pre {
   font-size: 0.85rem;
   line-height: 1.42;
   background: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
+  border-radius: 5px;
   overflow: auto;
   word-wrap: normal;
   padding: 1.45rem;
@@ -659,7 +732,7 @@ td:last-child {
 tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
+  border-radius: 5px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;

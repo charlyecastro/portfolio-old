@@ -12,9 +12,18 @@ const Contact = () => {
     return (
         <>
             <section className = "contact " style = {{justifyContent : "center", alignItems : "center", alignSelf : "center"}}>
-                <div className = "contained" style ={{maxWidth: "900px", borderRadius : "2%"}}>
-                <div  style = {{ backgroundColor : "#FFFFFF", }}>
+                <div className = "contained" style ={{maxWidth: "800px", borderRadius : "5px", justifyContent : "center", alignSelf : "center"}}>
+                <div  style = {{ backgroundColor : "#FFFFFF", borderRadius : "5px", padding : "30px", borderCollapse: "separate", perspective: "1px"}}>
                 <h2 className = "contactTitle">Let's Talk</h2>
+                <form style = {{display : "flex", flexDirection : "column"}}>
+                    <label>Full Name</label>
+                    <input type = "text" name = "name" placeholder = "John Doe"></input>
+                    <label>Email</label>
+                    <input type = "text" name = "email" placeholder = "john@email.com"></input>
+                    <label>Message</label>
+                    <textarea name="message" placeholder=" Hi Charlye" rows = {4}></textarea>
+                    <input type="submit" value="Send"></input>
+                </form>
                 </div>
                 </div>
             </section>

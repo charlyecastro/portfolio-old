@@ -73,10 +73,8 @@ const Layout = ({ children }) => {
         </div>
       </section> */}
 
-      <div
-        style={container}
-      >
-        <footer style={{textAlign: "center" }}>
+      <div className = "contained" style= {{ padding : "30px" }}>
+        <footer style={{textAlign: "center",}}>
           {/* © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a> */}
@@ -87,9 +85,9 @@ const Layout = ({ children }) => {
           <Link to = "https://github.com/charlyecastro"> 
           <i className = "fa fa-github linkStyle"/>
           </Link> 
-          <Link to = "https://github.com/charlyecastro"> 
+          <a href = "mailto:charlyecastro@gmail.com?Subject=Hi%20Charlye!"> 
           <i className = "fa fa-envelope linkStyle"/>
-          </Link> 
+          </a> 
         </footer>
       </div>
     </>

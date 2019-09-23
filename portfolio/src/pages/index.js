@@ -8,6 +8,10 @@ import Navbar from "../components/navbar"
 import Contact from "../components/contact"
 import LayoutStyle from "../components/layout.css"
 import Portrait from "../images/Photos/charlyeElbow.jpg"
+import Blue from "../images/Photos/Blue.jpeg"
+import Beach from "../images/Photos/BeachShoreline.jpg"
+import Hang from "../images/Photos/hangingFeet.jpg"
+import Desert from "../images/Photos/lightDesert.jpeg"
 import Card from "../components/card"
 
 
@@ -20,7 +24,7 @@ const IndexPage = () => (
       <section >
         <div style={{ marginTop: "50px" }}>
           <h5 style={{ fontSize: "1.5rem" }}>Hi I'm</h5>
-          <h1 style={{ fontSize: "13rem" }}> Charlye </h1>
+          <h1 style={{ fontSize: "13rem",  }}> Charlye </h1>
         </div>
         <h3 style={{ fontSize: "2rem" }}>I build meaningful projects</h3>
         <p>Seattle Based Software Engineer, Experienced in web and mobile development</p>
@@ -42,18 +46,18 @@ const IndexPage = () => (
         <p style={{ lineHeight: "2.0" }}>Im a fanatic about soccer, I love to watch it, play and talk about it. I also love movies, If you share a passion in any of these areas, feel free to get in touch! Oh and sense you’re here feel free to check out my playlist!
       </p>
       </div>
-      <iframe style={{ borderRadius: ".5%" }} src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe style={{ borderRadius: "5px" }} src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </section>
     <section id="work" className="workSection">
       <div className="contained" >
         <h4>Work</h4>
         <div className="row" style={{ justifyContent: "center" }}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card img= {Portrait}/>
+          <Card img= {Blue}/>
+          <Card img= {Beach}/>
+          <Card img= {Hang}/>
+          <Card img= "lets go"/>
+          <Card img= "teshoorayt"/>
         </div>
       </div>
     </section>

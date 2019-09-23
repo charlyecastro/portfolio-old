@@ -16,26 +16,24 @@ if (typeof window !== "undefined") {
 const Navbar = () => {
     return (
         <>
-        <div className = "contained">
-            <div  style={{
-                display: "flex",
-                flexGrow: 1,
-                justifyContent: "space-between",
-                marginTop: "1rem",
-                marginBottom: "1rem"
-
-            }}>
-                <Link smooth={true} className = "linkStyle" to="/"> CC </Link>
+            <div className="contained">
                 <div style={{
+                    display: "flex",
+                    flexGrow: 1,
                     justifyContent: "space-between",
-                    alignSelf : "center"
-
+                    marginTop: "1rem",
+                    marginBottom: "1rem"
                 }}>
-                    <Link className = "linkStyle" to="/#about">about </Link>
-                    <Link className = "linkStyle" to="/#work">work </Link>
-                    <Link className = "linkStyle" to="/resumePM.pdf/">resume </Link>
+                    <Link smooth={true} className="linkStyle" to="/"> CC </Link>
+                    <div style={{
+                        justifyContent: "space-between",
+                        alignSelf: "center"
+                    }}>
+                        <Link className="linkStyle" to="/#about">about </Link>
+                        <Link className="linkStyle" to="/#work">work </Link>
+                        <a className="linkStyle" href="/resumePM.pdf/">resume </a>
+                    </div>
                 </div>
-            </div>
             </div>
         </>
     )

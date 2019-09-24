@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Charlye Castro`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Charlye Castro | Software Engineer`,
+    description: `Charlye Castro is a Seattle based Software Engineer, experienced in web and mobile development`,
+    keywords : `Charlye Castro, Software Engineer, Web Developer, Mobile Developer, Seattle, Washington`,
     author: `Charlye Castro`,
   },
   plugins: [

@@ -8,10 +8,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-if (typeof window !== "undefined") {
-    // eslint-disable-next-line global-require
-    require("smooth-scroll")('a[href*="#"]')
-}
+import PDF from "../files/resume.pdf"
 
 const Navbar = () => {
     return (
@@ -24,14 +21,15 @@ const Navbar = () => {
                     marginTop: "1rem",
                     marginBottom: "1rem"
                 }}>
-                    <Link smooth={true} className="linkStyle" to="/"> CC </Link>
+                    <Link className="linkStyle" to="/"> CC </Link>
                     <div style={{
                         justifyContent: "space-between",
                         alignSelf: "center"
                     }}>
                         <Link className="linkStyle" to="/#about">about </Link>
                         <Link className="linkStyle" to="/#work">work </Link>
-                        <a className="linkStyle" href="/resumePM.pdf/">resume </a>
+                        <Link className="linkStyle" to="/#contact">contact </Link>
+                        <a className="linkStyle" href = {PDF} target = "_blank">resume </a>
                     </div>
                 </div>
             </div>

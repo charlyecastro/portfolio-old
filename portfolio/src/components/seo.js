@@ -75,7 +75,7 @@ function SEO({ description, lang, meta, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: ``,
+  description: `Charlye Castro is a Seattle based Software Engineer, experienced in web and mobile development`,
 }
 
 SEO.propTypes = {

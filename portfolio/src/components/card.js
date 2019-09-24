@@ -6,7 +6,6 @@
  */
 
 import React from "react"
-import { Link } from "gatsby"
 
 const cardShadow = {
     boxShadow: "4px 14px 32px 6px rgba(0,0,0,0.21)"

@@ -1,6 +1,7 @@
 html {
   font-family: sans-serif;
   scroll-behavior: smooth;
+  height:100%;
   /* -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; */
 }
@@ -8,6 +9,44 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#errorPage {
+  width: 100vw;
+  min-height: 100vh;
+  background: url("../images/Photos/lightDesert.jpeg") no-repeat;
+  background-size:cover;
+}
+
+#mainImg {  
+  width: 100vw;
+  max-width: 400px;
+  min-height: 100vh;
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 4px 14px 32px 6px rgba(0,0,0,0.2);
+  background: url("../images/Photos/charlyeElbow.jpg") no-repeat;
+  background-size:cover;
+}
+
+
+
+#test > #pTest:hover + #mainImg{
+  width: auto;
+  min-height: 500px;
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 4px 14px 32px 6px rgba(0,0,0,0.2);
+  background: url("../images/Photos/uwQuad.jpg") no-repeat;
+  /* background-size:cover; */
+}
+
+/* #test:hover  {
+color : red
+} */
+
+span:hover  {
+color : blue
 }
 
 .textImg {
@@ -29,6 +68,8 @@ body {
   min-height: 150px;
   transition : .5s
 }
+
+
 
 .windowImg {
   width:100%;

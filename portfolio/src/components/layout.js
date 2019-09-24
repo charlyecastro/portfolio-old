@@ -9,17 +9,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-import Header from "./header"
 import Navbar from "./navbar"
+import Footer from "./footer"
 import 'bootstrap/dist/css/bootstrap.css';
 import "./layout.css"
-import Card from "../components/card"
 import "../../node_modules/font-awesome/css/font-awesome.min.css"
-
-if (typeof window !== "undefined") {
-  // eslint-disable-next-line global-require
-  require("smooth-scroll")('a[href*="#"]')
-}
 
 const container = {
   margin: `0 auto`,
@@ -58,38 +52,8 @@ const Layout = ({ children }) => {
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <Navbar/>
         <main>{children}</main>
+      <Footer/>
 
-      {/* <section id= "work" style={{...workSection,}}>
-        <div style={container}>
-          <h4>Work</h4>
-          <div className = "row" style ={{justifyContent : "center"}}>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </div>
-        </div>
-      </section> */}
-
-      <div className = "contained" style= {{ padding : "30px" }}>
-        <footer style={{textAlign: "center",}}>
-          {/* © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a> */}
-          <p>Designed and built by Charlye Castro</p>
-          <Link to = "https://github.com/charlyecastro"> 
-          <i className = "fa fa-linkedin linkStyle"/>
-          </Link> 
-          <Link to = "https://github.com/charlyecastro"> 
-          <i className = "fa fa-github linkStyle"/>
-          </Link> 
-          <a href = "mailto:charlyecastro@gmail.com?Subject=Hi%20Charlye!"> 
-          <i className = "fa fa-envelope linkStyle"/>
-          </a> 
-        </footer>
-      </div>
     </>
   )
 }

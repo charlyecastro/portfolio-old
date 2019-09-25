@@ -50,10 +50,11 @@ const Layout = ({ children }) => {
   return (
     <>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+      <div style ={{overflowY:"hidden"}}>
       <Navbar/>
         <main>{children}</main>
       <Footer/>
-
+      </div>
     </>
   )
 }

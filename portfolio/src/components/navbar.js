@@ -9,6 +9,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 import PDF from "../files/resume.pdf"
+import Sidebar from "./sidebar"
+
 
 // const Navbar = () => {
 class Navbar extends React.Component {
@@ -19,12 +21,25 @@ class Navbar extends React.Component {
         };
     }
 
-    handleClick = () => {
+    toggleSidebar = () => {
         this.setState({
-            isOpen : !this.state.isOpen
+            isOpen: !this.state.isOpen
         })
-        console.log(this.state.isOpen)
-      }
+
+        if(!this.state.isOpen) {
+            document.documentElement.style.overflow = "hidden"
+        } else {
+            document.documentElement.style.overflow = "visible"
+        }
+    }
+
+    linkClicked = () => {
+        this.setState({
+            isOpen: false
+        })
+        document.documentElement.style.overflow = "visible"
+
+    }
 
     render() {
         return (
@@ -41,12 +56,13 @@ class Navbar extends React.Component {
                         <Link id="logo" className="logoStyle" to="/"> CC </Link>
 
                         <div style={{ alignSelf: "center", justifyContent: "flex-end" }}>
-                            <a id="burger" onClick={this.handleClick}>
+                            <a id="burger" className={this.state.isOpen ? "toggle" : ""} onClick={this.toggleSidebar}>
                                 <span ></span>
                                 <span ></span>
                             </a>
+                            <Sidebar isOpen={this.state.isOpen} handleLinkClick={this.linkClicked} />
                         </div>
-                        <div className = {this.state.isOpen ? "menu open" : "menu"} >
+                        <div className="menu" >
                             <Link className="linkStyle" to="/#about">about </Link>
                             <Link className="linkStyle" to="/#work">work </Link>
                             <Link className="linkStyle" to="/#contact">contact </Link>

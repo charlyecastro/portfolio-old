@@ -7,10 +7,6 @@
 
 import React from "react"
 
-const cardShadow = {
-    boxShadow: "4px 14px 32px 6px rgba(0,0,0,0.21)"
-}
-
 const Card = (props) => {
     const backgroundImg = {
         backgroundImage: `url(${props.img})`, backgroundSize: "cover", width: "100%", height: "100%"

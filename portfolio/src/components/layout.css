@@ -11,6 +11,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main :not(#side) {
+  /* filter: blur(3px); */
+}
+
+/* nav {
+  filter: blur(0px)
+} */
+
 #errorPage {
   width: 100vw;
   min-height: 100vh;
@@ -155,6 +163,19 @@ opacity: .5;
   justify-content: space-between;
   align-self: center;
   align-items: center
+}
+
+.blur {
+z-index: 1;
+position: fixed;
+top: 0;
+left:0;
+width: 100vw;
+height: 100vh;
+background: #000000;
+opacity: .0;
+backdrop-filter: blur(39px);
+transition: .5;
 }
 
  #burger {
@@ -923,7 +944,8 @@ pre tt:after {
   display: flex;
   flex-direction: column;
   transition: .5s;
-  transform: translateX(100%)
+  transform: translateX(100%);
+  backdrop-filter: blur(10px);
 }
 
 @media only screen and (max-width: 900px) {

@@ -22,7 +22,7 @@ class Sidebar extends React.Component {
     render() {
         return (
             <>
-                <div className={this.props.isOpen ? "sidebar open" : "sidebar"} >
+                <div id = "side" className={this.props.isOpen ? "sidebar open" : "sidebar"} >
 
                     <Link className="sideLinkContainer" onClick={this.props.handleLinkClick} to="/#about">
                         <i className="fa fa-user fa-lg iconStyle" />

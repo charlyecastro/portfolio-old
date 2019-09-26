@@ -18,7 +18,20 @@ class Navbar extends React.Component {
         super(props);
         this.state = {
             isOpen: false,
+            isUpScroll : false,
         };
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll = () => {
+
     }
 
     toggleSidebar = () => {
@@ -28,8 +41,10 @@ class Navbar extends React.Component {
 
         if(!this.state.isOpen) {
             document.documentElement.style.overflow = "hidden"
+            document.querySelector("main").style.filter = "blur(3px)"
         } else {
             document.documentElement.style.overflow = "visible"
+            document.querySelector("main").style.filter = "blur(0px)"
         }
     }
 
@@ -44,14 +59,14 @@ class Navbar extends React.Component {
     render() {
         return (
             <>
-                <div className="contained">
+                <nav id = "side" className="contained">
                     <div style={{
                         display: "flex",
                         width: "100%",
                         position: "relative",
                         justifyContent: "space-between",
                         marginTop: "1rem",
-                        marginBottom: "1rem"
+                        marginBottom: "1rem",
                     }}>
                         <Link id="logo" className="logoStyle" to="/"> CC </Link>
 
@@ -60,7 +75,9 @@ class Navbar extends React.Component {
                                 <span ></span>
                                 <span ></span>
                             </a>
+                            <div className = {this.state.isOpen ? "blur" : ""} ></div>
                             <Sidebar isOpen={this.state.isOpen} handleLinkClick={this.linkClicked} />
+                            
                         </div>
                         <div className="menu" >
                             <Link className="linkStyle" to="/#about">about </Link>
@@ -69,7 +86,7 @@ class Navbar extends React.Component {
                             <a className="linkStyle" href={PDF} target="_blank">resume </a>
                         </div>
                     </div>
-                </div>
+                </nav>
             </>
         )
     }

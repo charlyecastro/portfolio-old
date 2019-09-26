@@ -10,9 +10,9 @@ import React from "react"
 const Contact = () => {
     return (
         <>
-            <section id ="contact" className = "contact " style = {{ height : "100%", justifyContent : "center", alignItems : "center", alignSelf : "center"}}>
-                <div className = "contained" style ={{maxWidth: "800px", height : "100%", borderRadius : "5px", justifyContent : "center", alignSelf : "center"}}>
-                <div  style = {{ backgroundColor : "#FFFFFF", borderRadius : "5px", padding : "30px", borderCollapse: "separate", perspective: "1px"}}>
+            <section  id ="contact" className = "contact " style = {{ height : "100%", justifyContent : "center", alignItems : "center", alignSelf : "center"}}>
+                <div data-aos="fade-up" className = "contained" style ={{maxWidth: "800px", height : "100%", borderRadius : "5px", justifyContent : "center", alignSelf : "center"}}>
+                <div data-aos="fade-up" data-aos-delay="200" data-aos-anchor="#contact"  className = "contactForm">
                 <h2 className = "contactTitle">Let's Talk</h2>
                 <form style = {{display : "flex", flexDirection : "column"}}>
                     <label>Full Name</label>

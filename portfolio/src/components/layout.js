@@ -14,6 +14,8 @@ import Footer from "./footer"
 import 'bootstrap/dist/css/bootstrap.css';
 import "./layout.css"
 import "../../node_modules/font-awesome/css/font-awesome.min.css"
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 const container = {
   margin: `0 auto`,
@@ -47,12 +49,18 @@ const Layout = ({ children }) => {
     }
   `)
 
+  AOS.init(
+    {duration: 500,
+      once: true,
+      anchorPlacement: 'center'}
+  )
+
   return (
     <>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <div style ={{overflowY:"hidden"}}>
       <Navbar/>
-        <main>{children}</main>
+        <main >{children}</main>
       <Footer/>
       </div>
     </>

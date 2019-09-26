@@ -53,6 +53,7 @@ class Navbar extends React.Component {
             isOpen: false
         })
         document.documentElement.style.overflow = "visible"
+        document.querySelector("main").style.filter = "blur(0px)"
 
     }
 

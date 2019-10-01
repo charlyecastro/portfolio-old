@@ -2,6 +2,7 @@ html {
   font-family: sans-serif;
   scroll-behavior: smooth;
   height:100%;
+  width: 100%
   /* -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; */
 }
@@ -10,14 +11,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-main :not(#side) {
-  /* filter: blur(3px); */
-}
-
-/* nav {
-  filter: blur(0px)
-} */
 
 #errorPage {
   width: 100vw;
@@ -65,7 +58,7 @@ main :not(#side) {
   width: 50vw;
   height: 50vh;
   position: "relative";
-  min-height: 150px;
+  /* min-height: 150px; */
   transition : .5s
 }
 
@@ -152,17 +145,20 @@ opacity: .5;
 }
 
 .contained {
+  /* width:100%; */
   margin: 0 auto;
   max-width: 960px;
-  padding: 0px 1.0875rem 1.45rem;
   padding-left: 3rem;
-  padding-right: 3rem
+  padding-right: 3rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem
 }
 
 .menu {
   justify-content: space-between;
   align-self: center;
-  align-items: center
+  align-items: centert;
+
 }
 
 .blur {
@@ -180,13 +176,11 @@ transition: .5;
 
  #burger {
   display: none;
-  z-index : 4;
+  z-index: 5;
+  position: relative;
   box-sizing: border-box;
   width: 30px;
   height: 30px;
-  position: absolute;
-  top: 5px;
-  right: 0; 
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -197,6 +191,10 @@ transition: .5;
   transition: .5s ease-in-out;
   cursor: pointer;
 }
+
+/* #burger.toggle {
+ 
+} */
 
 #burger span {
   display: block;
@@ -256,6 +254,16 @@ transition: .5;
   width: 100%;
 }
 
+.section-spacing {
+  padding-top: 3rem;
+  padding-bottom: 3rem
+}
+
+.content-spacing {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem
+}
+
 .contact{
   height: 100vh;
   background: url("../images/Photos/blue.jpeg") no-repeat; 
@@ -278,6 +286,15 @@ transition: .5;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 30px
+}
+
+[aos="test"] {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+[aos="test"].aos-animate {
+  opacity: 1;
 }
 
 section {
@@ -315,7 +332,41 @@ footer,
 header,
 main,
 menu,
-nav,
+nav{
+  /* position : fixed;
+  width : 100%;
+  z-index : 2;
+  top : 0;
+  left: 0;
+  background-color : #FFFFFF;
+  box-shadow: 4px 14px 32px 6px rgba(0,0,0,0.1);
+  -webkit-transform: translate(0,-60px);
+  transition: .5s ease; */
+}
+
+.navStart{
+  position : fixed;
+  width : 100%;
+  z-index : 2;
+  top : 0;
+  left: 0;
+  background-color : rgba(255,255,255,0);
+  /* box-shadow: 4px 14px 32px 6px rgba(0,0,0,0.1); */
+  transition: .5s ease;
+}
+
+.navShow{
+  background-color : rgba(255,255,255,1);
+  box-shadow: 4px 14px 32px 6px rgba(0,0,0,0.1);
+  transition: .5s ease; 
+}
+
+.navHide{
+  background-color : rgba(255,255,255,1);
+  box-shadow: 4px 14px 32px 6px rgba(0,0,0,0);
+  -webkit-transform: translate(0,-70px);
+  transition: .5s ease;
+}
 
 summary {
   display: block;
@@ -424,20 +475,24 @@ input[type=text], textarea {
   padding : 5px
 }
 
-input[type=submit] {
+input[type=submit], button {
   border-radius: 3px;
   background-color: white;
   padding : 10px;
   border: .5px solid #373637;
-  transition: .5s
+  transition: .5s;
+  padding-left: 2rem;
+  padding-right: 2rem
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, button:hover {
   border-radius: 3px;
   background-color: #373637;
   padding : 10px;
   border: .5px solid #373637;
-  color : white
+  color : white;  
+  padding-left: 2rem;
+  padding-right: 2rem
 }
 
 button,
@@ -953,7 +1008,6 @@ pre tt:after {
   flex-direction: column;
   transition: .5s;
   transform: translateX(100%);
-  backdrop-filter: blur(10px);
 }
 
 @media only screen and (max-width: 900px) {
@@ -968,7 +1022,7 @@ pre tt:after {
   }
 
   h5 {
-    margin-bottom: -40px;
+    margin-bottom: -20px;
   }
 }
 
@@ -983,7 +1037,7 @@ pre tt:after {
   }
 
   h5 {
-    margin-bottom: -40px;
+    margin-bottom: 0px;
   }
 
   .menu {
@@ -995,14 +1049,14 @@ pre tt:after {
   }
 
   #burger {
-    display: block
+    display: block;
+    z-index: 5;
     
   }
 
   #logo {
-    z-index: 2;
-    top: 5px;
-    left: 0
+    position: relative;
+    z-index: 5;
   }
 
   .open {
@@ -1011,7 +1065,7 @@ pre tt:after {
 
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
 
   html {
     font-size: 100%;
@@ -1031,13 +1085,9 @@ pre tt:after {
     perspective: 1px
   }
 
-  /* h5 {
-    margin-bottom: -40px;
-  } */
-
   .contained {
     padding-left: 1rem;
-    padding-right: 1rem
+    padding-right: 1rem;
   }
 }
 

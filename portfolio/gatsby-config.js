@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Charlye Castro | Software Engineer`,
+    title: `Software Engineer`,
     description: `Charlye Castro is a Seattle based Software Engineer, experienced in web and mobile development`,
     keywords : `Charlye Castro, Software Engineer, Web Developer, Mobile Developer, Seattle, Washington`,
     author: `Charlye Castro`,

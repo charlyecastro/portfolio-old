@@ -10,9 +10,10 @@ import React from "react"
 const Contact = () => {
     return (
         <>
-            <section  id ="contact" className = "contact " style = {{ height : "100%", justifyContent : "center", alignItems : "center", alignSelf : "center"}}>
-                <div data-aos="fade-up" className = "contained" style ={{maxWidth: "800px", height : "100%", borderRadius : "5px", justifyContent : "center", alignSelf : "center"}}>
-                <div data-aos="fade-up" data-aos-delay="200" data-aos-anchor="#contact"  className = "contactForm">
+            <section  id ="contact" className = "contact " style = {{ height : "100%", justifyContent : "center", }}>
+                <div style = {{height : "100%"}} >
+                <div data-aos = "fade-up" className = "contained section-spacing" style ={{maxWidth: "800px", borderRadius : "5px", justifyContent : "center", alignSelf : "center"}}>
+                <div  className = "contactForm">
                 <h2 className = "contactTitle">Let's Talk</h2>
                 <form style = {{display : "flex", flexDirection : "column"}}>
                     <label>Full Name</label>
@@ -23,6 +24,7 @@ const Contact = () => {
                     <textarea name="message" placeholder=" Hi Charlye" rows = {4}></textarea>
                     <input type="submit" value="Send"></input>
                 </form>
+                </div>
                 </div>
                 </div>
             </section>

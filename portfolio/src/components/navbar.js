@@ -17,8 +17,10 @@ class Navbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            prevScroll: 0,
+            scrollUp : false,
+            isTop: true,
             isOpen: false,
-            isUpScroll : false,
         };
     }
 
@@ -31,7 +33,15 @@ class Navbar extends React.Component {
     }
 
     handleScroll = () => {
+        let currentScroll = window.pageYOffset
+        let isScrollingUp = this.state.prevScroll > currentScroll
 
+        console.log(currentScroll)
+        this.setState({
+            prevScroll: currentScroll,
+            scrollUp : isScrollingUp,
+            isTop : currentScroll == 0
+          });
     }
 
     toggleSidebar = () => {
@@ -50,7 +60,7 @@ class Navbar extends React.Component {
 
     linkClicked = () => {
         this.setState({
-            isOpen: false
+            isOpen: false,
         })
         document.documentElement.style.overflow = "visible"
         document.querySelector("main").style.filter = "blur(0px)"
@@ -58,26 +68,26 @@ class Navbar extends React.Component {
     }
 
     render() {
+
+        const style ={position : "fixed", width : "100%", zIndex : 2, top : 0, left: 0, backgroundColor : "#FFFFFF", boxShadow: "4px 14px 32px 6px rgba(0,0,0,0.1)"}
+
         return (
             <>
-                <nav id = "side" className="contained">
-                    <div style={{
+                <nav   id = "side" className = {this.state.scrollUp & !this.state.isTop ? "navStart navShow" : !this.state.scrollUp & !this.state.isTop ? "navStart navHide" : "navStart"} >
+                    <div className="contained" style={{
                         display: "flex",
-                        width: "100%",
                         position: "relative",
                         justifyContent: "space-between",
-                        marginTop: "1rem",
-                        marginBottom: "1rem",
                     }}>
-                        <Link id="logo" className="logoStyle" to="/"> CC </Link>
+                        <Link id="logo" className="linkStyle" to="/" onClick = {this.linkClicked}> CC </Link>
 
-                        <div style={{ alignSelf: "center", justifyContent: "flex-end" }}>
+                        <div style={{ alignSelf: "center", justifyContent: "flex-end",
+ }}>
                             <a id="burger" className={this.state.isOpen ? "toggle" : ""} onClick={this.toggleSidebar}>
                                 <span ></span>
                                 <span ></span>
                             </a>
                             <div className = {this.state.isOpen ? "blur" : ""} ></div>
-                            <Sidebar isOpen={this.state.isOpen} handleLinkClick={this.linkClicked} />
                             
                         </div>
                         <div className="menu" >
@@ -87,6 +97,7 @@ class Navbar extends React.Component {
                             <a className="linkStyle" href={PDF} target="_blank">resume </a>
                         </div>
                     </div>
+                    <Sidebar isOpen={this.state.isOpen} handleLinkClick={this.linkClicked} />
                 </nav>
             </>
         )

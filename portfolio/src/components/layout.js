@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Navbar from "./navbar"
 import Footer from "./footer"
@@ -16,27 +16,6 @@ import "./layout.css"
 import "../../node_modules/font-awesome/css/font-awesome.min.css"
 import AOS from 'aos'
 import 'aos/dist/aos.css';
-
-const container = {
-  margin: `0 auto`,
-  maxWidth: "960px",
-  padding: `0px 1.0875rem 1.45rem`,
-  paddingLeft: "3rem",
-  paddingRight: "3rem"
-}
-
-const test = {
-  justifyContent : "center",
-  alignItems : "center",
-  alignSelf : "center",
-  textAlign : "center",
-  color : "#ff0000"
-}
-
-const workSection = {
-  backgroundColor: "#FAFAFA",
-  width: "100%",
-}
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -49,20 +28,19 @@ const Layout = ({ children }) => {
     }
   `)
 
-  AOS.init(
-    {duration: 500,
-      once: true,
-      anchorPlacement: 'center'}
-  )
+  // AOS.init(
+  //   {once: true,
+  //     duration: 800
+  //     }
+  // )
 
+    
   return (
     <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <div style ={{overflowY:"hidden"}}>
       <Navbar/>
         <main >{children}</main>
       <Footer/>
-      </div>
+     
     </>
   )
 }

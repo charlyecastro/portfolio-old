@@ -12,7 +12,7 @@ const Contact = () => {
         <>
             <section  id ="contact" className = "contact " style = {{ height : "100%", justifyContent : "center", }}>
                 <div style = {{height : "100%"}} >
-                <div data-aos = "fade-up" className = "contained section-spacing" style ={{maxWidth: "800px", borderRadius : "5px", justifyContent : "center", alignSelf : "center"}}>
+                <div className = "contained section-spacing" style ={{maxWidth: "800px", borderRadius : "5px", justifyContent : "center", alignSelf : "center"}}>
                 <div  className = "contactForm">
                 <h2 className = "contactTitle">Let's Talk</h2>
                 <form style = {{display : "flex", flexDirection : "column"}}>

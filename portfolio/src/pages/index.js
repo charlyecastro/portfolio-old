@@ -18,11 +18,11 @@ const IndexPage = () => (
     <div className="contained" style={{ display: "flex", alignItems: "center", height : "100vh", justifyContent : "center", width:"100%"
  }}>
       <section id = "#hi" style = {{}} >
-        <div data-aos="fade-up"  >
+        <div  >
           <h5 style={{ fontSize: "1.5rem", fontWeight : "400" }}>Hi I'm</h5>
           <h1 style={{ fontSize: "13rem", marginBottom : "0px"}}> Charlye </h1>
         </div>
-        <div data-aos="fade-up" >
+        <div >
           <h3 style={{ fontSize: "2rem", paddingBottom : ".5rem", paddingTop : "1rem" }}>I build meaningful projects</h3>
           <p style = {{paddingBottom : "1rem", paddingTop : "1rem", }}>Seattle Based Software Engineer, Experienced in web and mobile development</p>
           <div style = {{paddingBottom : "2rem", paddingTop : "2rem"}} >
@@ -34,12 +34,12 @@ const IndexPage = () => (
     <section  id="about" className="contained ">
       <h2  >Get to know</h2>
       <div className="row">
-        <div data-aos="fade-up" id="test" className="col-md-6 col-sm-12 col content-spacing">
+        <div id="test" className="col-md-6 col-sm-12 col content-spacing">
           <h3 className = "content-spacing">My Story</h3>
           <p style={{ lineHeight: "2.0" }}>I’m Charlye, I recently graduated from the  <a id="pTest" href="#"> university of washington</a>, majored Informatics focusing in Software Engineering. This sumer I am interning at Limeade as a mobile development intern. Im experienced in full stack and mobile development. If you would like more detail on my experience, check out my resume!</p>
 
         </div>
-        <div data-aos="fade-up" className="col-md-6 col-sm-12 col-12 text-center">
+        <div className="col-md-6 col-sm-12 col-12 text-center">
           <img src={Portrait} />
         </div>
       </div>

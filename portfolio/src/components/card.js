@@ -13,7 +13,7 @@ const Card = (props) => {
     }
     return (
         <>
-            <div data-aos = "fade-up" className={"col col-md-5 col-sm-12 window"}>
+            <div className={"col col-md-5 col-sm-12 window"}>
                 <div  className="windowText" style={{ display: "flex", flexDirection: "column" }}>
                     <h2 className = "textImg" style={backgroundImg}>Limeade</h2>
                     <div style={{

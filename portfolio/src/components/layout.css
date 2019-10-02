@@ -43,7 +43,8 @@ body {
   width: 50vw;
   height: 50vh;
   position: relative;
-  /* min-height: 150px; */
+  /* min-width: 150px; */
+  display: flex;
   transition : .5s
 }
 
@@ -60,6 +61,18 @@ body {
   opacity: 0
 }
 
+.clip {
+  font-size: 3.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  z-index: 1;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
 img {
   /* width: 100%;
   max-width: 400px;
@@ -72,7 +85,6 @@ img {
 
 .windowText {
   opacity: 1;
-  z-index: 100;
   transition: 1s;
 }
 
@@ -287,14 +299,7 @@ transition: .5;
   margin-bottom: 30px
 }
 
-[aos="test"] {
-  opacity: 0;
-  transition-property: opacity;
-}
 
-[aos="test"].aos-animate {
-  opacity: 1;
-}
 
 section {
   justify-content: center;
@@ -317,6 +322,7 @@ section {
   border-style: none;
   border-radius: 5px;
   box-shadow: 4px 14px 32px 6px rgba(0,0,0,0.2);
+  margin: 0 auto
 }
 
 /* img {
@@ -1003,8 +1009,8 @@ pre tt:after {
   z-index : 2;
   position: fixed;
   justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   top : 0;
   right: 0;
   background-color: white;
@@ -1033,6 +1039,10 @@ pre tt:after {
 @media only screen and (max-width: 720px) {
   html {
     font-size: 100%;
+  }
+
+  .window {
+    width : 100%
   }
 
   h1 {
@@ -1080,6 +1090,8 @@ pre tt:after {
     
     font-size: 5rem !important;
   }
+
+
 
   .contactForm {
     background-color : #FFFFFF;

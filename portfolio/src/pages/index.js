@@ -16,7 +16,7 @@ const IndexPage = ({data}) => (
   <Layout>
     {/* <Navbar /> */}
     <SEO title = "Charlye"/>
-    <div className="contained" style={{ display: "flex", alignItems: "center", height : "100vh", justifyContent : "center", width:"100%"
+    <div className="contained" style={{ display: "flex", alignItems: "center", height : "100vh", justifyContent : "center",
  }}>
       <section id = "#hi" style = {{}} >
         <div  >
@@ -27,7 +27,7 @@ const IndexPage = ({data}) => (
           <h3 style={{ fontSize: "2rem", paddingBottom : ".5rem", paddingTop : "1rem" }}>I build meaningful projects</h3>
           <p style = {{paddingBottom : "1rem", paddingTop : "1rem", }}>Seattle Based Software Engineer, Experienced in web and mobile development</p>
           <div style = {{paddingBottom : "2rem", paddingTop : "2rem"}} >
-          <button style = {{}}> Let's Talk</button>
+          <button > Let's Talk</button>
           </div>
         </div>
       </section>
@@ -40,7 +40,7 @@ const IndexPage = ({data}) => (
           <p style={{ lineHeight: "2.0" }}>I’m Charlye, I recently graduated from the  <a id="pTest" href="#"> university of washington</a>, majored Informatics focusing in Software Engineering. This sumer I am interning at Limeade as a mobile development intern. Im experienced in full stack and mobile development. If you would like more detail on my experience, check out my resume!</p>
 
         </div>
-        <div className="col-md-6 col-sm-12 col-12 picWrap">
+        <div className="col-md-6 col-sm-12 col-12 ">
           <Img className = "picture" fluid={data.profilePic.childImageSharp.fluid } alt = "image name" />
         </div>
       </div>
@@ -59,7 +59,7 @@ const IndexPage = ({data}) => (
         <div className="row" style={{ justifyContent: "center" }}>
           <Card name = "Wordz" position = "Web Developer" date = "Fall 2017" img={data.wordzCard.childImageSharp.fluid } colorOne = "#486FAA" colorTwo = "#7EA8D5" />
           <Card name = "iEmotion" position = "Mobile Developer" date = "Spring 2018" img={data.iEmotionCard.childImageSharp.fluid } colorOne = "#583BA8" colorTwo = "#916DD3" />
-          <Card name = "Vidcharade" position = "Full Stack Developer" date = "Fall 2018" img={data.videocharadeCard.childImageSharp.fluid } colorOne = "#53A59C" colorTwo = "#8BD1CB" />
+          <Card name = "Charade" position = "Full Stack Developer" date = "Fall 2018" img={data.videocharadeCard.childImageSharp.fluid } colorOne = "#53A59C" colorTwo = "#8BD1CB" />
           <Card name = "Limeade" position = "Intern" date = "Summer 2019" img={data.limeadeCard.childImageSharp.fluid } colorOne = "#29A63C" colorTwo = "#53D26F" />
           <Card name = "Beacon" position = "Mobiile Developer" date = "Spriing 2019" img={data.beaconCard.childImageSharp.fluid } colorOne = "#4A90E2" colorTwo = "#81C3F3" />
           <Card name = "earlybird" position = "Mobile Developer" date = "Spring 2019" img={data.earlybirdCard.childImageSharp.fluid } colorOne = "#FFE48B" colorTwo = "#FFF3BF" />

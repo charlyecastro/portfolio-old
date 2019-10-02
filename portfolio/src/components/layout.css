@@ -318,6 +318,7 @@ section {
 .picture {
   width: 100%;
   max-width: 400px;
+  height: 100%;
   height: auto;
   border-style: none;
   border-radius: 5px;

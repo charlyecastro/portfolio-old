@@ -1,7 +1,7 @@
 import React from "react"
 
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import {Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -14,7 +14,6 @@ import Card from "../components/card"
 const IndexPage = ({data}) => (
 
   <Layout>
-    {/* <Navbar /> */}
     <SEO title = "Charlye"/>
     <div className="contained" style={{ display: "flex", alignItems: "center", height : "100vh", justifyContent : "center",
  }}>
@@ -27,7 +26,7 @@ const IndexPage = ({data}) => (
           <h3 style={{ fontSize: "2rem", paddingBottom : ".5rem", paddingTop : "1rem" }}>I build meaningful projects</h3>
           <p style = {{paddingBottom : "1rem", paddingTop : "1rem", }}>Seattle Based Software Engineer, Experienced in web and mobile development</p>
           <div style = {{paddingBottom : "2rem", paddingTop : "2rem"}} >
-          <button > Let's Talk</button>
+          <Link to="/limeade"><button > Let's Talk</button></Link> 
           </div>
         </div>
       </section>

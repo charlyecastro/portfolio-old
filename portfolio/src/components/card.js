@@ -7,27 +7,46 @@
 
 import React from "react"
 
+import Img from "gatsby-image"
+import { isAbsolute } from "path"
 const Card = (props) => {
-    const backgroundImg = {
-        backgroundImage: `url(${props.img})`, backgroundSize: "cover", width: "100%", height: "100%"
+    // const backgroundImg = {
+    //      backgroundSize: "cover", width: "100%", height: "100%",  backgroundPosition: "center"
+    // }
+
+    const cardTitle = {
+        background: `-webkit-linear-gradient(${props.colorOne}, ${props.colorTwo})`,
+        webkitBackgroundClip: "text",
+        webkitTextFillColor: "transparent",
+        fontSize: "3.5rem",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        padding: "30px",
+        zIndex: 1
     }
+
+    const cardDetail = {
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        padding: "30px",
+        zIndex: 1
+    }
+
     return (
         <>
             <div className={"col col-md-5 col-sm-12 window"}>
-                <div  className="windowText" style={{ display: "flex", flexDirection: "column" }}>
-                    <h2 className = "textImg" style={backgroundImg}>Limeade</h2>
-                    <div style={{
-                        position: "absolute",
-                        bottom: 0,
-                        left: 0,
-                        padding: "30px"
-                    }}>
-                        <h6>Summer 2019</h6>
-                        <p>Mobile Developer Intern</p>
+                <Img fluid={props.img} className="windowImg" />
+                <div className="windowText" >
+                    <h2 style={cardTitle} >{props.name}</h2>
+                    <div style={cardDetail}>
+                        <h6>{props.date}</h6>
+                        <p>{props.position}</p>
                     </div>
                 </div>
-                <div className="windowImg" style={backgroundImg}>
-                </div>
+
+
 
             </div>
         </>

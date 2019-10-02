@@ -1,16 +1,17 @@
 import React from "react"
 
+import PropTypes from "prop-types"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from "../components/contact"
-import Portrait from "../images/Photos/charlyeElbow.jpg"
-import Blue from "../images/Photos/blue.jpeg"
-import Beach from "../images/Photos/BeachShoreline.jpg"
-import Hang from "../images/Photos/hangingFeet.jpg"
 import Card from "../components/card"
 
 
-const IndexPage = () => (
+
+const IndexPage = ({data}) => (
 
   <Layout>
     {/* <Navbar /> */}
@@ -39,8 +40,8 @@ const IndexPage = () => (
           <p style={{ lineHeight: "2.0" }}>I’m Charlye, I recently graduated from the  <a id="pTest" href="#"> university of washington</a>, majored Informatics focusing in Software Engineering. This sumer I am interning at Limeade as a mobile development intern. Im experienced in full stack and mobile development. If you would like more detail on my experience, check out my resume!</p>
 
         </div>
-        <div className="col-md-6 col-sm-12 col-12 text-center">
-          <img src={Portrait} />
+        <div className="col-md-6 col-sm-12 col-12 picWrap">
+          <Img className = "picture" fluid={data.profilePic.childImageSharp.fluid } alt = "image name" />
         </div>
       </div>
       <div className='pt-5 content-spacing' >
@@ -56,17 +57,75 @@ const IndexPage = () => (
       <div className="contained section-spacing" >
         <h4 className = "content-spacing">Work</h4>
         <div className="row" style={{ justifyContent: "center" }}>
-          <Card img={Portrait} />
-          <Card img={Blue} />
-          <Card img={Beach} />
-          <Card img={Hang} />
-          <Card img={Beach} />
-          <Card img={Hang} />
+          <Card name = "Wordz" position = "Web Developer" date = "Fall 2017" img={data.wordzCard.childImageSharp.fluid } colorOne = "#486FAA" colorTwo = "#7EA8D5" />
+          <Card name = "iEmotion" position = "Mobile Developer" date = "Spring 2018" img={data.iEmotionCard.childImageSharp.fluid } colorOne = "#583BA8" colorTwo = "#916DD3" />
+          <Card name = "Vidcharade" position = "Full Stack Developer" date = "Fall 2018" img={data.videocharadeCard.childImageSharp.fluid } colorOne = "#53A59C" colorTwo = "#8BD1CB" />
+          <Card name = "Limeade" position = "Intern" date = "Summer 2019" img={data.limeadeCard.childImageSharp.fluid } colorOne = "#29A63C" colorTwo = "#53D26F" />
+          <Card name = "Beacon" position = "Mobiile Developer" date = "Spriing 2019" img={data.beaconCard.childImageSharp.fluid } colorOne = "#4A90E2" colorTwo = "#81C3F3" />
+          <Card name = "earlybird" position = "Mobile Developer" date = "Spring 2019" img={data.earlybirdCard.childImageSharp.fluid } colorOne = "#FFE48B" colorTwo = "#FFF3BF" />
         </div>
       </div>
     </section>
     < Contact />
   </Layout>
 )
+
+IndexPage.propTypes = {
+  data : PropTypes.object.isRequired,
+};
+
+export const query = graphql`
+{
+  profilePic : file(relativePath : {eq: "profilePic.jpg"}) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  beaconCard : file(relativePath : {eq: "beaconCard.png"}) {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  iEmotionCard : file(relativePath : {eq: "iEmotionCard.png"}) {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  wordzCard : file(relativePath : {eq: "wordzCard.png"}) {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  videocharadeCard : file(relativePath : {eq: "videocharadeCard.png"}) {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  limeadeCard : file(relativePath : {eq: "limeadeCard.png"}) {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  earlybirdCard : file(relativePath : {eq: "earlybirdCard.png"}) {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+`;
 
 export default IndexPage

@@ -36,11 +36,10 @@ class Navbar extends React.Component {
         let currentScroll = window.pageYOffset
         let isScrollingUp = this.state.prevScroll > currentScroll
 
-        console.log(currentScroll)
         this.setState({
             prevScroll: currentScroll,
             scrollUp : isScrollingUp,
-            isTop : currentScroll == 0
+            isTop : currentScroll === 0
           });
     }
 
@@ -68,8 +67,6 @@ class Navbar extends React.Component {
     }
 
     render() {
-
-        const style ={position : "fixed", width : "100%", zIndex : 2, top : 0, left: 0, backgroundColor : "#FFFFFF", boxShadow: "4px 14px 32px 6px rgba(0,0,0,0.1)"}
 
         return (
             <>

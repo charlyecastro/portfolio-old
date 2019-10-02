@@ -14,8 +14,8 @@ import Footer from "./footer"
 import 'bootstrap/dist/css/bootstrap.css';
 import "./layout.css"
 import "../../node_modules/font-awesome/css/font-awesome.min.css"
-import AOS from 'aos'
-import 'aos/dist/aos.css';
+// import AOS from 'aos'
+// import 'aos/dist/aos.css';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

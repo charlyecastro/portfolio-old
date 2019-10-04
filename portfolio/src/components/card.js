@@ -8,6 +8,7 @@
 import React from "react"
 
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 const Card = (props) => {
 
@@ -23,22 +24,22 @@ const Card = (props) => {
         zIndex: 1
     }
 
+    const cardLink = {
+        color : "#000000"
+    }
+
     return (
-        //
         <>
-            <div className={"col-md-5 col-sm-12 window"}>
-                <Img fluid={props.img} className="windowImg" />
-                <div className="windowText" >
-                    <h2 className = "clip" style={cardTitle} >{props.name}</h2>
-                    <div style={cardDetail}>
-                        <h6>{props.date}</h6>
-                        <p>{props.position}</p>
+                <Link to= {props.link} className={"col-md-5 col-sm-12 window"} style = {cardLink}>
+                    <Img fluid={props.img} className="windowImg" />
+                    <div className="windowText" >
+                        <h2 className="clip" style={cardTitle} >{props.name}</h2>
+                        <div style={cardDetail}>
+                            <h6>{props.date}</h6>
+                            <p>{props.position}</p>
+                        </div>
                     </div>
-                </div>
-
-
-
-            </div>
+            </Link>
         </>
     )
 }

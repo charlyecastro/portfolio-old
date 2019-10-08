@@ -14,12 +14,7 @@ const Tools = (props) => {
             <div className="contained ">
                 <h2 style={{ fontWeight: "300" }}> Tools </h2>
                 <ul className="content-spacing" style={{ columns: "2" }}>
-                    <li>React</li>
-                    <li>Github</li>
-                    <li>NPM</li>
-                    <li>Gatsby</li>
-                    <li>Java</li>
-                    <li>Javascript</li>
+                    {props.test.map((item,i) => <li key={i}>{item}</li>)}
                 </ul>
             </div>
         </>

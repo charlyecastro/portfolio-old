@@ -24,6 +24,14 @@ const Card = (props) => {
         zIndex: 1
     }
 
+    const dateStyle = {
+        fontWeight : "300",
+    }
+    const posStyle = {
+        fontWeight : "400",
+        marginTop : "10px"
+    }
+
     const cardLink = {
         color : "#000000"
     }
@@ -35,8 +43,8 @@ const Card = (props) => {
                     <div className="windowText" >
                         <h2 className="clip" style={cardTitle} >{props.name}</h2>
                         <div style={cardDetail}>
-                            <h6>{props.date}</h6>
-                            <p>{props.position}</p>
+                            <h3 style= {dateStyle}>{props.date}</h3>
+                            <h6 style = {posStyle}>{props.position}</h6>
                         </div>
                     </div>
             </Link>

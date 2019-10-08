@@ -19,7 +19,7 @@ const Overview = (props) => {
                     <div id="test" className="col-md-6 col-sm-12 col content-spacing">
                         <p style={{ lineHeight: "2.0" }}>{props.paragraph}</p>
                     </div>
-                    <div className="col-md-6 col-sm-12 col-12 ">
+                    <div className="col-md-6 col-sm-12 col-12 img-spacing">
                         <Img className="picture" fluid={props.img} alt={props.alt} />
                     </div>
                 </div>

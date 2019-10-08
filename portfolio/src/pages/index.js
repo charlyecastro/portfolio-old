@@ -10,9 +10,7 @@ import Contact from "../components/contact"
 import Card from "../components/card"
 
 
-
 const IndexPage = ({data}) => (
-
   <Layout>
     <SEO title = "Charlye"/>
     <div className="contained" style={{ display: "flex", alignItems: "center", height : "100vh", justifyContent : "center",
@@ -20,7 +18,7 @@ const IndexPage = ({data}) => (
       <section id = "#hi" style = {{}} >
         <div style = {{position : "relative"}}  >
           <h5 className = "hiStyle" >Hi, I'm</h5>
-          <h1 style={{ fontSize: "13rem", marginBottom : "0px"}}> Charlye </h1>
+          <h1 className = "titleStyle"> Charlye </h1>
         </div>
         <div >
           <h3 style={{ fontSize: "2rem", paddingBottom : ".5rem", paddingTop : "1rem" }}>I build meaningful projects</h3>
@@ -32,7 +30,7 @@ const IndexPage = ({data}) => (
       </section>
     </div>
     <section  id="about" className="contained ">
-      <h2  >Get to know</h2>
+      <h2 className = "sectionTitle" >Get to know</h2>
       <div className="row rowTest">
         <div className="col-md-6 col-sm-12 col content-spacing">
         {/* <Img className = "picture  mobileImg"  style = {{marginBottom: "2rem", marginTop : "2rem"}} fluid={data.profilePic.childImageSharp.fluid } alt = "image name" /> */}
@@ -58,14 +56,22 @@ const IndexPage = ({data}) => (
     </section>
     <section id="work" className="workSection">
       <div className="contained section-spacing" >
-        <h4 className = "content-spacing">Work</h4>
+        <h2 className = "content-spacing sectionTitle">Work</h2>
         <div className="row" style={{ justifyContent: "center" }}>
-          <Card link = "/wordz" name = "Wordz" position = "Web Developer" date = "Fall 2017" img={data.wordzCard.childImageSharp.fluid } colorOne = "#486FAA" colorTwo = "#7EA8D5" />
-          <Card link = "/iemotion" name = "iEmotion" position = "Mobile Developer" date = "Spring 2018" img={data.iEmotionCard.childImageSharp.fluid } colorOne = "#583BA8" colorTwo = "#916DD3" />
-          <Card link = "/charade" name = "Charade" position = "Full Stack Developer" date = "Fall 2018" img={data.videocharadeCard.childImageSharp.fluid } colorOne = "#53A59C" colorTwo = "#8BD1CB" />
-          <Card link = "/limeade" name = "Limeade" position = "Intern" date = "Summer 2019" img={data.limeadeCard.childImageSharp.fluid } colorOne = "#29A63C" colorTwo = "#53D26F" />
-          <Card link = "/beacon" name = "Beacon" position = "Mobiile Developer" date = "Spriing 2019" img={data.beaconCard.childImageSharp.fluid } colorOne = "#4A90E2" colorTwo = "#81C3F3" />
-          <Card link = "/earlybird" name = "earlybird" position = "Mobile Developer" date = "Spring 2019" img={data.earlybirdCard.childImageSharp.fluid } colorOne = "#FFE48B" colorTwo = "#FFF3BF" />
+
+        <Card link="/limeade" name="Limeade" position="Intern" date="Summer 2019" img={data.limeadeCard.childImageSharp.fluid} colorOne="#29A63C" colorTwo="#53D26F" />
+
+        <Card link="/beacon" name="Beacon" position="Mobiile Developer" date="Spring 2019" img={data.beaconCard.childImageSharp.fluid} colorOne="#4A90E2" colorTwo="#81C3F3" />
+
+        <Card link="/earlybird" name="earlybird" position="Mobile Developer" date="Spring 2019" img={data.earlybirdCard.childImageSharp.fluid} colorOne="#FFE48B" colorTwo="#FFF3BF" />
+
+        <Card link="/charade" name="Charade" position="Full Stack Developer" date="Fall 2018" img={data.videocharadeCard.childImageSharp.fluid} colorOne="#53A59C" colorTwo="#8BD1CB" />
+
+        <Card link="/iemotion" name="iEmotion" position="Mobile Developer" date="Spring 2018" img={data.iEmotionCard.childImageSharp.fluid} colorOne="#583BA8" colorTwo="#916DD3" />
+
+        <Card link="/wordz" name="Wordz" position="Web Developer" date="Fall 2017" img={data.wordzCard.childImageSharp.fluid} colorOne="#486FAA" colorTwo="#7EA8D5" />
+
+
         </div>
       </div>
     </section>
@@ -132,3 +138,5 @@ export const query = graphql`
 `;
 
 export default IndexPage
+
+

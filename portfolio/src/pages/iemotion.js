@@ -12,31 +12,41 @@ import Description from "../components/description"
 import Intro from "../components/intro"
 import Tools from "../components/tools"
 import Overview from "../components/overview"
+import Takeaway from "../components/takeaway"
+
 
 const Limeade = ({ data }) => (
 
-    <Layout>
-        <SEO title="Charlye" />
-        <Img className="bannerImg" fluid={data.iemotionBanner.childImageSharp.fluid} alt="desciption" />
-        <Description title="iEmotion" date="Spring 2018" position="Mobile Developer" />
-        <Intro paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" />
-        <Tools />
-        <Overview paragraph="I’m Charlye, I recently graduated from the university of washington, majored Informatics focusing in Software Engineering. This sumer I am interning at Limeade as a mobile development intern. Im experienced in full stack and mobile development. If you would like more detail on my experience, check out my resume!" img={data.iEmotionMockup.childImageSharp.fluid} alt="image name" />
+  <Layout>
+    <SEO title="iEmotion" />
+    <Img className="bannerImg" fluid={data.iemotionBanner.childImageSharp.fluid} alt="desciption" />
+    <Description title="iEmotion" date="Spring 2018" position="Mobile Developer" />
+    <Intro paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" />
+    <Tools test={["Android Studio", "Firebase", "Watson API", "Google Charts", "Git", "Android"]} />
+    <Overview paragraph="I’m Charlye, I recently graduated from the university of washington, majored Informatics focusing in Software Engineering. This sumer I am interning at Limeade as a mobile development intern. Im experienced in full stack and mobile development. If you would like more detail on my experience, check out my resume!" img={data.iEmotionMockup.childImageSharp.fluid} alt="image name" />
 
-        <section id="work" className="workSection">
-            <div className="contained section-spacing" >
-                <h4 className="content-spacing">Other Work</h4>
-                <div className="row" style={{ justifyContent: "center" }}>
-                    <Card name="Wordz" position="Web Developer" date="Fall 2017" img={data.beaconCard.childImageSharp.fluid} colorOne="#486FAA" colorTwo="#7EA8D5" />
-                    <Card name="iEmotion" position="Mobile Developer" date="Spring 2018" img={data.beaconCard.childImageSharp.fluid} colorOne="#583BA8" colorTwo="#916DD3" />
-                </div>
-            </div>
-        </section>
-    </Layout>
+    <div className="contained section-spacing">
+      <h2 style={{ fontWeight: "300" }}>Take Aways</h2>
+      <div className="row content-spacing">
+        <Takeaway title = "Just Ask" paragraph = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."/>
+        <Takeaway title = "Find it yourself" paragraph = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."/>
+      </div>
+    </div>
+
+    <section id="work" className="workSection">
+      <div className="contained section-spacing" >
+        <h4 className="content-spacing">Similar Work</h4>
+        <div className="row" style={{ justifyContent: "center" }}>
+          <Card link="/earlybird" name="earlybird" position="Mobile Developer" date="Spring 2019" img={data.earlybirdCard.childImageSharp.fluid} colorOne="#FFE48B" colorTwo="#FFF3BF" />
+          <Card link="/beacon" name="Beacon" position="Mobiile Developer" date="Spriing 2019" img={data.beaconCard.childImageSharp.fluid} colorOne="#4A90E2" colorTwo="#81C3F3" />
+        </div>
+      </div>
+    </section>
+  </Layout>
 )
 
 Limeade.propTypes = {
-    data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export const query = graphql`
@@ -62,7 +72,13 @@ export const query = graphql`
       }
     }
   }
-
+  earlybirdCard : file(relativePath : {eq: "earlybirdCard.png"}) {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
 }
 `;
 

@@ -21,7 +21,8 @@ const Limeade = ({ data }) => (
     <SEO title="Beacon" />
     <Img className="bannerImg" fluid={data.beaconBanner.childImageSharp.fluid} alt="desciption" />
     <Description title="Beacon" date="Fall 2017" position="Web Developer" />
-    <Intro paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" />
+    <Intro paragraph="I enrolled in a 10 week course where the class discussed and practiced being collaborative software engineers. We then had the opportunity to apply our new skills to build our project. Through the course, my team worked on the design and implementation of a location sharing mobile application, Beacon. 
+" />
     <Tools test={["Flutter", "Firebase", "Flutter map", "Git", "Figma", "Markdown", "iOS", "Android"]} />
     <Overview paragraph="I’m Charlye, I recently graduated from the university of washington, majored Informatics focusing in Software Engineering. This sumer I am interning at Limeade as a mobile development intern. Im experienced in full stack and mobile development. If you would like more detail on my experience, check out my resume!" img={data.beaconMockup.childImageSharp.fluid} alt="image name" />
 

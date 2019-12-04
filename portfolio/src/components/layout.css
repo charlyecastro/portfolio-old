@@ -14,7 +14,7 @@ body {
 
 #errorPage {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   background: url("../images/Photos/lightDesert.jpeg") no-repeat;
   background-size:cover;
 }
@@ -1050,6 +1050,7 @@ pre tt:after {
   height: 100vh;
   top : 0;
   right: 0;
+  bottom: 0;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -1068,7 +1069,7 @@ pre tt:after {
     /* overflow : hidden */
   }
 
-  h1 {
+  .titleStyle {
     font-size: 10rem !important;
   }
 
@@ -1101,7 +1102,7 @@ pre tt:after {
     width : 100%
   }
 
-  h1 {
+  .titleStyle {
     font-size: 7.5rem !important;
     margin-top: 0;
   }
@@ -1144,7 +1145,7 @@ pre tt:after {
     /* overflow : hidden */
   }
 
-  h1 {
+  .titleStyle {
     font-size: 5rem !important;
   }
 

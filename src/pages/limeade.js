@@ -33,7 +33,7 @@ const Limeade = ({ data }) => (
 
     <section id="work" className="workSection ">
       <div className="contained section-spacing" >
-        <h4 className="content-spacing">Other Work</h4>
+        <h4 className="content-spacing">Similar Work</h4>
         <div className="row" style={{ justifyContent: "center" }}>
           <Card link="/charade" name="Charade" position="Full Stack Developer" date="Fall 2018" img={data.videocharadeCard.childImageSharp.fluid} colorOne="#53A59C" colorTwo="#8BD1CB" />
           <Card link="/beacon" name="Beacon" position="Mobiile Developer" date="Spriing 2019" img={data.beaconCard.childImageSharp.fluid} colorOne="#4A90E2" colorTwo="#81C3F3" />

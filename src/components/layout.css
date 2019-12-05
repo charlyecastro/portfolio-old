@@ -13,10 +13,45 @@ body {
 }
 
 #errorPage {
-  width: 100vw;
+  /* width: 99vw; */
   height: 100vh;
   background: url("../images/Photos/lightDesert.jpeg") no-repeat;
   background-size:cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+ 
+  /* overflow: hidden; */
+}
+
+#errorTitle {
+  font-size: 13rem;
+  margin-bottom : 0px;
+  font-weight: bold;
+  font-size: 13rem;
+  line-height: 1.15;
+  background: url("../images/Photos/lightDesert.jpeg") no-repeat; 
+  background-size: cover;
+  background-position: center;
+  /* background-position-y: -105px; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#errorBtn{
+  border-radius: 3px;
+  background-color: transparent;
+  color: white;
+  padding : 10px;
+  border: .5px solid white;
+  transition: .5s;
+  padding-left: 2rem;
+  padding-right: 2rem
+}
+
+#errorBtn:hover{
+  background-color: white;
+  color: black;
 }
 
 #mainImg {  

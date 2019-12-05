@@ -2,7 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `Software Engineer`,
     description: `Charlye Castro is a Seattle based Software Engineer, experienced in web and mobile development`,
-    keywords : `Charlye Castro, Software Engineer, Web Developer, Mobile Developer, Seattle, Manson, Washington, Limeade `,
+    url: "https://www.charlyecastro.com", 
+    image: "/images/profilePic.jpg",
+    keywords : `Charlye Castro, Software Engineer, Web Developer, Mobile Developer, Seattle, Manson, Washington, Limeade`,
     author: `Charlye Castro`,
   },
   plugins: [
@@ -26,6 +28,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-153919009-1",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

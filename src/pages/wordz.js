@@ -20,15 +20,17 @@ const Limeade = ({ data }) => (
     <SEO title="Wordz with Friendz" />
     <Img className="bannerImg" fluid={data.wordzBanner.childImageSharp.fluid} alt="desciption" />
     <Description title="Wordz with Friendz" date="Fall 2017" position="Web Developer" />
-    <Intro paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" />
-    <Tools test={["Bootstrap", "React", "Firebase", "Git",]} />
-    <Overview paragraph="I’m Charlye, I recently graduated from the university of washington, majored Informatics focusing in Software Engineering. This sumer I am interning at Limeade as a mobile development intern. Im experienced in full stack and mobile development. If you would like more detail on my experience, check out my resume!" img={data.wordzMockup.childImageSharp.fluid} alt="image name" />
+    <Intro paragraph="My first development course in the informatics program was front end development. I learned how to build websites from scratch using industry standard tools. For my group project, my team built an imitation web app of the popular game, words with friends." />
+    <Tools test={["Bootstrap", "React", "Firebase", "Git", "Rest API"]} />
+    <Overview 
+    paragraph="For this class project we decided to build a multiplayer web app game based on Words with Friends. Our web app is called Wordz with Friendz (really unique, i know). For those who don't know the game words with friends. You are essentially assigned random letters and you need to spell out words with them. Each letter has a certain amount of points and the objective is to spell words that tally up more points than your opponent. The challenge of building this game was the word verification, we had to figure out how to check words horizontally and vertically."
+     par2= "To handle this, the data structure we used was a 2d array, this helps imitate X and Y coordinates. This makes it possible to associate letters with letters that are left and right of each other or above and below. In order to confirm that the word being submitted we used the Oxford Dictionary API for verification. My job was to work on the random letter tile generator, which assigned letters and their points to users when they first start the game or need a new set of letters. To build this application we used React.js and Firebase for user authentication. There was a lot of communication in the team and we tackled issues together. It was a little intimidating in the beginning, however working through our problems with a committed team, the project ended up being a fun learning experience."
+     img={data.wordzMockup.childImageSharp.fluid} alt="Mockup Image of Wordz with Friendz App" />
 
     <div className="contained section-spacing">
       <h2 style={{ fontWeight: "300" }}>Take Aways</h2>
       <div className="row content-spacing">
-        <Takeaway title = "Just Ask" paragraph = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."/>
-        <Takeaway title = "Find it yourself" paragraph = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."/>
+        <Takeaway title = "Challenge Yourself" paragraph = "There's honestly no fun or improvement without a challenge. For my first dev related project, i was hoping to go a little easy. However, we all agree to do something challenging and it certainly paid off. It's going to suck for a little bit in the beginning, but it always ends with a learning experience. It's not always rewarding taking on a challenge, but that's the risk you got to be willing to take."/>
       </div>
     </div>
 

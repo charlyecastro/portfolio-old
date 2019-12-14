@@ -19,11 +19,13 @@ const Limeade = ({ data }) => (
 
   <Layout>
     <SEO title="iEmotion" />
-    <Img className="bannerImg" fluid={data.iemotionBanner.childImageSharp.fluid} alt="desciption" />
+    <Img className="bannerImg" fluid={data.iemotionBanner.childImageSharp.fluid} alt="iEmotion Image Banner" />
     <Description title="iEmotion" date="Spring 2018" position="Mobile Developer" />
-    <Intro paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" />
+    <Intro paragraph="In the last quarter of my Junior year, I signed up for a Mobile Development course, that taught me the fundamentals of Android development. By the end of the quarter, my team of 5 built and demoed iEmotion, a smart chat application." />
     <Tools test={["Android Studio", "Firebase", "Watson API", "Google Charts", "Git", "Android"]} />
-    <Overview paragraph="I’m Charlye, I recently graduated from the university of washington, majored Informatics focusing in Software Engineering. This sumer I am interning at Limeade as a mobile development intern. Im experienced in full stack and mobile development. If you would like more detail on my experience, check out my resume!" img={data.iEmotionMockup.childImageSharp.fluid} alt="image name" />
+    <Overview paragraph="Our app was powered by the IBM Watson API, which performed text analysis and provide a personality report for the user. A user would simply tap on a received message and the application would display the tone of the text message such as “Excited”, “Upset”, “Angry” and so on. This would help a user understand the message better, helping them decide on a better response. The app also analyzed the user as well. Based on their sent messages the user can receive a personality report. Using the personality analysis provided by IBM, we present that data through a graph using Google charts. This visualization helps the user understand themselves better and get an idea of what people see them as." 
+    par2 = "My job for this project was primarily involved in the messaging component. I built and designed the user interface for the messages list screen. Fetching the data from firebase then displayed all of the user’s conversations, starting with the most recent. In this same screen a user can return to a conversation or initiate a new one. I also connected IBM Watson to the message experience, making it possible for users to tap on message and receive a text analysis. This project was fun because I got to relearn some technology through a new environment. Our experience with firebase and rest API’s, was through web development, never with mobile. We read and shared documentation on how to implement the technologies in our application which was a lot but worth it."
+    img={data.iEmotionMockup.childImageSharp.fluid} alt="Mockup Image of iEmotion App" />
 
     <div className="contained section-spacing">
       <h2 style={{ fontWeight: "300" }}>Take Aways</h2>
@@ -38,7 +40,7 @@ const Limeade = ({ data }) => (
         <h4 className="content-spacing">Similar Work</h4>
         <div className="row" style={{ justifyContent: "center" }}>
           <Card link="/earlybird" name="earlybird" position="Mobile Developer" date="Spring 2019" img={data.earlybirdCard.childImageSharp.fluid} colorOne="#FFE48B" colorTwo="#FFF3BF" />
-          <Card link="/beacon" name="Beacon" position="Mobiile Developer" date="Spriing 2019" img={data.beaconCard.childImageSharp.fluid} colorOne="#4A90E2" colorTwo="#81C3F3" />
+          <Card link="/beacon" name="Beacon" position="Mobiile Developer" date="Spring 2019" img={data.beaconCard.childImageSharp.fluid} colorOne="#4A90E2" colorTwo="#81C3F3" />
         </div>
       </div>
     </section>

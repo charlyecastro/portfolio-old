@@ -13,16 +13,18 @@ const Overview = (props) => {
 
     return (
         <>
-            <div className="contained section-spacing">
+            <div className="contained section-spacing ">
                 <h2 style={{ fontWeight: "300" }}>Overview</h2>
                 <div className="row">
-                    <div id="test" className="col-md-6 col-sm-12 col content-spacing">
+                    <div className="col-md-6 col-sm-12 col content-spacing">
                         <p style={{ lineHeight: "2.0" }}>{props.paragraph}</p>
                     </div>
-                    <div className="col-md-6 col-sm-12 col-12 img-spacing">
-                        <Img className="picture" fluid={props.img} alt={props.alt} />
+                    <div className="col-md-6 col-sm-12 col-12 img-spacing ">
+                        <Img className=" picture " fluid={props.img} alt={props.alt} />
+                        {/* picture */}
                     </div>
                 </div>
+                <p className = "" style={{ lineHeight: "2.0" }}>{props.par2}</p>
             </div>
         </>
     )

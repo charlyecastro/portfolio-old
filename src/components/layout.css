@@ -17,6 +17,7 @@ body {
   height: 100vh;
   background: url("../images/Photos/lightDesert.jpeg") no-repeat;
   background-size:cover;
+  display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -46,7 +47,8 @@ body {
   border: .5px solid white;
   transition: .5s;
   padding-left: 2rem;
-  padding-right: 2rem
+  padding-right: 2rem;
+  margin: 2rem;
 }
 
 #errorBtn:hover{
@@ -312,6 +314,7 @@ transition: .5;
 
 .img-spacing {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .contact{
@@ -357,11 +360,12 @@ section {
 .picture {
   width: 100%;
   max-width: 400px;
-  height: 400px;
+  height: 450px;
   border-style: none;
   border-radius: 5px;
   box-shadow: 4px 14px 32px 6px rgba(0,0,0,0.2);
-  margin: 0 auto
+  margin: 0 auto;
+  align-items: center;
 }
 
 .mobileImg {

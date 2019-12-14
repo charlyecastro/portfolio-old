@@ -39,7 +39,7 @@ const Card = (props) => {
     return (
         <>
                 <Link to= {props.link} className={"col-md-5 col-sm-12 window"} style = {cardLink}>
-                    <Img fluid={props.img} className="windowImg" />
+                    <Img fluid={props.img} className="windowImg" alt = {props.name} />
                     <div className="windowText" >
                         <h2 className="clip" style={cardTitle} >{props.name}</h2>
                         <div style={cardDetail}>

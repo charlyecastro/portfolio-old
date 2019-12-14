@@ -19,17 +19,19 @@ const Limeade = ({ data }) => (
 
   <Layout>
     <SEO title="Charade" />
-    <Img className="bannerImg" fluid={data.charadeBanner.childImageSharp.fluid} alt="desciption" />
+    <Img className="bannerImg" fluid={data.charadeBanner.childImageSharp.fluid} alt="VideoCharade Image Banner" />
     <Description title="Videocharade" date="Fall 2018" position="Full Stack Developer" />
-    <Intro paragraph="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" />
-    <Tools test={["React", "Node", "Golang", "Docker", "AWS", "Postman", "MongoDB", "Redis", "RabbitMQ", "MySQL", "WebRTC"]} />
-    <Overview paragraph="I’m Charlye, I recently graduated from the university of washington, majored Informatics focusing in Software Engineering. This sumer I am interning at Limeade as a mobile development intern. Im experienced in full stack and mobile development. If you would like more detail on my experience, check out my resume!" img={data.charadeMockup.childImageSharp.fluid} alt="image name" />
+    <Intro paragraph="For my Full Stack Development course, we learned how to build complex restful API’s from scratch. For the remaining 2 weeks, the class formed groups and built our own full stack application. My 3-person team built a peer to peer video streaming charade game called videocharade." />
+    <Tools test={["React", "Node", "Golang", "Docker", "AWS", "Postman", "Redis", "RabbitMQ", "MySQL", "WebRTC"]} />
+    <Overview paragraph="This was the first project that I took leadership on. To decide on what we were going to build I found the consensus of the team’s level of effort and availability. Based on the consensus, we agreed to build an online charades game. The way the game worked was, a user would make an account, search for a user and invite them to a game of charades. When the game began, one user receives a word to act out, meanwhile the other user submitted their guesses. Statistics of the game are published on a leaderboard, to display who were the best charade partners.When the time to delegate tasks of the application came, I based the assignments on our previous discussion on commitment levels of each team member. " 
+    par2 = "Ultimately, I assigned myself peer to peer communication aspect of the project since I was determined to take on the challenge. The front end was built in react, using webRTC and communicated with a node microservice that connects users to begin their video communication. I then assigned the game logic assignment to the team member who presented the next best commitment level and therefore gave the leaderboard task to the least available team member. We drew an architecture diagram of our app, showing the complexity and integration of our work. Once we built the application, we deployed our servers and site on AWS instances and register domain names for them. We met our expected deadline and had a successful demo. This is one of the projects I’m most proud of because it was my first leadership role and I met all my goals for the project."
+    img={data.charadeMockup.childImageSharp.fluid} alt="Mockup Image of VideoCharade App" />
 
     <div className="contained section-spacing">
       <h2 style={{ fontWeight: "300" }}>Take Aways</h2>
       <div className="row content-spacing">
-        <Takeaway title = "Just Ask" paragraph = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."/>
-        <Takeaway title = "Find it yourself" paragraph = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."/>
+        <Takeaway title = "Voice Concerns" paragraph = "We as a team agreed to be realistic and talk about our availability. My goal was to build something new, cool and most importantly realistic. Being transparent about our commitment, helped us agree on a doable project and properly assign work to members. I've been on teams where the leader is too optimistic, and things don't end well. I got a solid idea of my team members situation and this helped me guide the project."/>
+  
       </div>
     </div>
 

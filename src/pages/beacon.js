@@ -19,18 +19,20 @@ const Limeade = ({ data }) => (
 
   <Layout>
     <SEO title="Beacon" />
-    <Img className="bannerImg" fluid={data.beaconBanner.childImageSharp.fluid} alt="desciption" />
+    <Img className="bannerImg" fluid={data.beaconBanner.childImageSharp.fluid} alt="Beacon Image Banner" />
     <Description title="Beacon" date="Fall 2017" position="Web Developer" />
-    <Intro paragraph="I enrolled in a 10 week course where the class discussed and practiced being collaborative software engineers. We then had the opportunity to apply our new skills to build our project. Through the course, my team worked on the design and implementation of a location sharing mobile application, Beacon. 
-" />
-    <Tools test={["Flutter", "Firebase", "Flutter map", "Git", "Figma", "Markdown", "iOS", "Android"]} />
-    <Overview paragraph="I’m Charlye, I recently graduated from the university of washington, majored Informatics focusing in Software Engineering. This sumer I am interning at Limeade as a mobile development intern. Im experienced in full stack and mobile development. If you would like more detail on my experience, check out my resume!" img={data.beaconMockup.childImageSharp.fluid} alt="image name" />
+    <Intro paragraph="During my last Spring quarter at the UW, I enrolled in a class which discussed and practiced being collaborative software engineers. We also had the opportunity to apply our new skills to build our project. Throughout the course, my team worked on the design and implementation of a location sharing mobile application, Beacon." />
+    <Tools test={["Flutter", "Firebase", "Flutter Map", "Git", "Figma", "Markdown", "iOS", "Android"]} />
+    <Overview 
+    paragraph="Using Flutter, we essentially built a cross platform version of Apple’s find my friends app. Allowing Android users and iPhone users to find each other. A user would simply send a friend request to a user and once the request was accepted, both users could view each other's location. We dedicated the first 7 weeks to documenting everything about the application, such as requirements, priorities, problem statement, roles, architecture, and responsibilities. At the time it was extensive, however it made the 3-week development process run smoothly. Everyone was aware of their roles, responsibility and what had to be done. Having everything written down cleared a lot of ambiguity within the team."
+    par2 = "There was a lot of overlap in teammates duties (for example our firebase architecture touched on authentication, geolocation storage, friend requests), which affected the work of multiple teammates. My job was to handle friend request screen, which involved displaying a list of friend request, the action of sending a request, and the action of accepting or rejecting a request. I had to properly update the user interface and the database. Our documentation was a guide on who needed to talk to who and what they needed to accomplish. Whenever someone had a question about the application, we’d refer to the documentation. Most of the communication centered around how teammates would integrate their work together and conducting code reviews. We delivered that application on our agreed deadline and received only 2 GitHub issues, which we closed. This app was one of the most successful and efficient school projects I have ever worked on and the closest to real work experience." 
+    img={data.beaconMockup.childImageSharp.fluid} alt="Mockup Image of Beacon App" />
 
     <div className="contained section-spacing">
       <h2 style={{ fontWeight: "300" }}>Take Aways</h2>
       <div className="row content-spacing">
-        <Takeaway title = "Just Ask" paragraph = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."/>
-        <Takeaway title = "Find it yourself" paragraph = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."/>
+        <Takeaway title = "Assign Ownership" paragraph = "To get the best commitment out of a teammate is not to assign responsibility, but ownership. Saying that a piece of a project belongs to specific team members adds a weight of importance and accountability. Our team assigned ownership and brought the best out of us, because we all felt that we were working on a greater purpose."/>
+        <Takeaway title = "Write It Down" paragraph = "It’s a little crazy to think about it but writing something down does truly make it official. I've had projects where work is assigned vocally and sometimes it's not enough. Saying a deliverable is due a certain day or assign a task to a partner doesn't feel permanent. However, writing this information on paper, makes it become a contract that can’t be disobeyed."/>
       </div>
     </div>
 

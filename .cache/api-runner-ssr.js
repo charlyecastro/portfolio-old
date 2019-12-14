@@ -4,6 +4,9 @@ var plugins = [{
     },{
       plugin: require('/Users/Charles/Desktop/charlyecastro.github.io/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/favicon.png"},
+    },{
+      plugin: require('/Users/Charles/Desktop/charlyecastro.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      options: {"plugins":[],"trackingId":"UA-153919009-1"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

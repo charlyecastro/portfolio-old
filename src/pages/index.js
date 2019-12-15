@@ -30,20 +30,20 @@ const IndexPage = ({data}) => (
       </section>
     </div>
     <section  id="about" className="contained ">
-      <h2 className = "sectionTitle" >Get to know</h2>
+      <h2 className = "sectionTitle content-spacing" >Get to know</h2>
       <div className="row rowTest">
         <div className="col-md-6 col-sm-12 col content-spacing">
-          <h3 className = "content-spacing">My Story</h3>
+          <h3 className = "">My Story</h3>
           
-          <p style={{ lineHeight: "2.0" }}>I’m Charlye, I recently graduated from the  <a id="pTest" href="#"> University of Washington</a>, majored Informatics focusing in Software Engineering. This past Summer I interned at Limeade as a mobile development intern. Im experienced in full stack and mobile development. If you would like more detail on my experience, check out my resume!</p>
+          <p className = "content-spacing" style={{ lineHeight: "2.0" }}>I’m Charlye Castro, I recently graduated from the <a id="pTest" href="#"> University of Washington</a>, where I majored in Informatics, focused on Software Engineering. I am currently in Seattle, but I grew up in <a id="pTest" href="#"> Manson, Washington</a>, a small town located on the shores of Lake Chelan. As a way to keep in touch, I am freelancing for local companies in my hometown. However, this past summer I interned at Limeade as a mobile developer. Im most experienced in full stack and mobile development, but aside from tech, I have many other passions that I invest my time into. If you’re interested, go ahead and check out my<a id="pTest" href="#"> Resume!</a>  </p>
         </div>
         <div className="col-md-6 col-sm-12 col-12 content-spacing ">
           <Img className = "picture content-spacing"  fluid={data.profilePic.childImageSharp.fluid } alt = "image name" />
         </div>
       </div>
       <div >
-        <h3 className = "content-spacing">My Passions</h3>
-        <p style={{ lineHeight: "2.0", paddingBottom : "20px" }}>Im a fanatic about soccer, I love to watch it, play and talk about it. I also love movies, If you share a passion in any of these areas, feel free to get in touch! Oh and sense you’re here feel free to check out my playlist!
+        <h3 >My Passions</h3>
+        <p className = "content-spacing" style={{ lineHeight: "2.0", paddingBottom : "20px" }}>One of my biggest passions is soccer, whether it’s watching, playing, or simply talking about the sport. Film is another interest of mine as I have watched countless movies and gained inspiration for my own projects and designs. Movie soundtracks have introduced me to some of my favorite music genres and artists. Below is a playlist featuring some of my most listened to songs that continue to motivate me to create projects I am passionate about. 
       </p>
       </div>
       <div>

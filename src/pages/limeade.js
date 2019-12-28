@@ -19,7 +19,7 @@ const Limeade = ({ data }) => (
     <SEO title="Limeade" />
     <Img className="bannerImg" fluid={data.limeadeBanner.childImageSharp.fluid} alt="Limeade Image Banner" />
     <Description title="Limeade" date="Summer 2019" position="Mobile Developer Intern" />
-    <Intro paragraph="I recently took on an internship position as a Mobile Developer for Limeade, a software engineering company based in Bellevue, WA. Within my three months, I was able to experience working in the mobile development industry and gained insight for future work." />
+    <Intro paragraph= {["I recently took on an internship position as a Mobile Developer for ", <a href = "https://www.limeade.com/en/">Limeade</a>, ", a software engineering company based in Bellevue, WA. Within my three months, I was able to experience working in the mobile development industry and gained insight for future work."]} />
     <Tools test={["Xcode", "Android Studio", "Azure", "Git", "Postman", "Sourcetree", "Android", "iOS"]} />
     <Overview 
     paragraph= {["During my time at Limeade, I was a part of the ", <i>"listening tools"</i>, " team which focused on the limeade survey experience. My task was to improve survey experiences for both native IOS and Android mobile users. Within this taskforce, I was exposed to not only the industry's agile environment, but also to crucial research & developmental practices and their overall software architecture. Although I was an intern, I took on several projects alongside full-time employees. I was frequently involved in sprint meetings where I reported back on the progress of work. I also had the opportunity to demo my implementations which were real solutions for the product."]} 

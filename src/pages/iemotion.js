@@ -29,8 +29,7 @@ const Limeade = ({ data }) => (
     <div className="contained section-spacing">
       <h2 style={{ fontWeight: "300" }}>Take Aways</h2>
       <div className="row content-spacing">
-        <Takeaway title = "Just Ask" paragraph = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."/>
-        <Takeaway title = "Find it yourself" paragraph = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."/>
+        <Takeaway title = "Clarity is Key" paragraph = "For this project, there was a lot of dependency on our firebase database. So before we coded anything, we worked on diagraming our database. We dedicated a few days on this, which helped us understand how data was being stored and how to access it. Thanks for this discussion we developed a stronger plan on how to code our seperate components. Its better to have a clear plan before building anything."/>
       </div>
     </div>
 

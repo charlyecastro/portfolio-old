@@ -30,9 +30,9 @@ const Limeade = ({ data }) => (
     <div className="contained section-spacing">
       <h2 style={{ fontWeight: "300" }}>Take Aways</h2>
       <div className="row content-spacing">
-        <Takeaway title = "Just Ask" paragraph = ""/>
-        <Takeaway title = "Jump on Oppurtunities" paragraph = ""/>
-        <Takeaway title = "Don't be afraid" paragraph = ""/>
+        <Takeaway title = "Share your interests" paragraph = "At my internship, I shared my curiosity about product management and I was given the chance to help out with a project alongside full-time PMs. This opportunity would most likely not have been made available to me if I hadn’t mentioned it first. Expressing your interests to others will help keep you in mind when relevant opportunities pop up. If you’re open about your interests, opportunities will appear."/>
+        <Takeaway title = "Give it a shot" paragraph = "When there's an opportunity to work on something you are interested, but don't necessarily have the experience, give it a shot. You will certainly learn something from the experience and find out whether to pursue it or not. The PM project I participated in allowed me to communicate with real clients that used the application. I learned how the product affected users and that I needed to improve my communication with clients by building rapport."/>
+        <Takeaway title = "Try before you ask" paragraph = "During this internship, I learned the balance between independence and asking for help. I delved deeply into the possible solutions to a problem until I felt certain I have exhausted my options. I found this helpful because when I would ask for help, I could explain my previous attempts at solving the issue. This would help form a baseline that would narrow down which options we had left. It is always great practice to find a solution to a problem by yourself, but sometimes it’s more practical to simply ask someone for hand."/>
       </div>
     </div>
 

@@ -1,7 +1,7 @@
 import React from "react"
 
 import PropTypes from "prop-types"
-import {graphql} from "gatsby"
+import {Link, graphql} from "gatsby"
 import Img from "gatsby-image"
 import PDF from "../files/resume.pdf"
 
@@ -9,6 +9,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from "../components/contact"
 import Card from "../components/card"
+import BeaconCard from "../components/cards/beaconCard.js"
 
 
 const IndexPage = ({data}) => (
@@ -25,7 +26,7 @@ const IndexPage = ({data}) => (
           <h3 style={{ fontSize: "2rem", paddingBottom : ".5rem", paddingTop : "1rem" }}>I build meaningful projects</h3>
           <p style = {{paddingBottom : "1rem", paddingTop : "1rem", }}>Seattle Based Software Engineer, Experienced in web and mobile development</p>
           <div style = {{paddingBottom : "2rem", paddingTop : "2rem"}} >
-          <button > Let's Talk</button> 
+          <Link to="/#contact"> <button > Let's Talk</button> </Link>
           </div>
         </div>
       </section>

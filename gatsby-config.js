@@ -3,7 +3,7 @@ module.exports = {
     title: `Software Engineer`,
     description: `Charlye Castro is a Seattle based Software Engineer, experienced in web and mobile development`,
     url: "https://www.charlyecastro.com", 
-    image: "src/images/favicon.png",
+    image: "/src/images/favicon.png",
     keywords : `Charlye Castro, Software Engineer, Web Developer, Mobile Developer, Seattle, Manson, Washington, Limeade`,
     author: `Charlye Castro`,
   },

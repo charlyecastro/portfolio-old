@@ -10,11 +10,12 @@ import SEO from "../components/seo"
 import Contact from "../components/contact"
 import Card from "../components/card"
 import BeaconCard from "../components/cards/beaconCard.js"
+import image from "../images/favicon.png"
 
 
 const IndexPage = ({data}) => (
   <Layout>
-    <SEO title = "Charlye"/>
+    <SEO title = "Charlye" image={image}/>
     <div className="contained" style={{ display: "flex", alignItems: "center", height : "100vh", justifyContent : "center",
  }}>
       <section id = "#hi" style = {{}} >

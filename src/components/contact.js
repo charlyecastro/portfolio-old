@@ -16,12 +16,12 @@ const Contact = () => {
                 <div  className = "contactForm">
                 <h2 className = "sectionTitle contactTitle">Let's Talk</h2>
                 <form style = {{display : "flex", flexDirection : "column"}} action="//formspree.io/charlyecastro@gmail.com" method="POST">
-                    <label>Full Name</label>
-                    <input type = "text" name = "name" placeholder = "Peter Parker"></input>
-                    <label>Email</label>
-                    <input type = "text" name="_replyto" placeholder = "spidey@avengers.com"></input>
-                    <label>Message</label>
-                    <textarea name="message" placeholder=" Hi Charlye" rows = {4}></textarea>
+                    <label htmlFor = "name">Full Name</label>
+                    <input id ="name" type = "text" name = "name" placeholder = "Peter Parker"></input>
+                    <label htmlFor = "email">Email</label>
+                    <input id = "email" type = "text" name="_replyto" placeholder = "spidey@avengers.com"></input>
+                    <label htmlFor= "message">Message</label>
+                    <textarea id = "message" name="message" placeholder=" Hi Charlye" rows = {4}></textarea>
                     <input type="submit" value="Send"></input>
                 </form>
                 </div>

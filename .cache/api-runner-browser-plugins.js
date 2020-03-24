@@ -1,7 +1,10 @@
 module.exports = [{
-      plugin: require('/Users/Charles/Desktop/charlyecastro.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-browser.js'),
+      plugin: require('../node_modules/gatsby-plugin-manifest/gatsby-browser.js'),
+      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/favicon.png"},
+    },{
+      plugin: require('../node_modules/gatsby-plugin-google-analytics/gatsby-browser.js'),
       options: {"plugins":[],"trackingId":"UA-153919009-1"},
     },{
-      plugin: require('/Users/Charles/Desktop/charlyecastro.github.io/gatsby-browser.js'),
+      plugin: require('../gatsby-browser.js'),
       options: {"plugins":[]},
     }]

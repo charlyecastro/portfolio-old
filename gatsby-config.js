@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Software Engineer`,
     description: `Charlye Castro is a Seattle based Software Engineer, experienced in web and mobile development`,
-    url: "https://www.charlyecastro.com", 
+    url: "https://charlyecastro.com", 
     image: "/src/images/logo.png",
     keywords : `Charlye Castro, Software Engineer, Web Developer, Mobile Developer, Seattle, Manson, Washington, Limeade`,
     author: `Charlye Castro`,

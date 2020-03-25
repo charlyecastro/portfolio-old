@@ -6,7 +6,6 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Contact from "../components/contact"
 import Card from "../components/card"
 import Description from "../components/description"
 import Intro from "../components/intro"

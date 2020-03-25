@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
+import Logo from "../images/logo.png"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, url, lang, meta, title, image }) {
@@ -19,7 +20,6 @@ function SEO({ description, url, lang, meta, title, image }) {
             url
             title
             description
-            image
             author
           }
         }
@@ -27,7 +27,7 @@ function SEO({ description, url, lang, meta, title, image }) {
     `
   )
 
-  const metaImg = `${url}${image}`
+  const metaImg = `${url}${Logo}`
   const metaDescription = description || site.siteMetadata.description
 
   return (
@@ -41,6 +41,10 @@ function SEO({ description, url, lang, meta, title, image }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          property: `image`,
+          content: metaImg,
         },
         {
           property: `og:title`,
@@ -57,6 +61,14 @@ function SEO({ description, url, lang, meta, title, image }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image:width`,
+          content: `512`,
+        },
+        {
+          property: `og:image:height`,
+          content: `512`,
         },
 
 
@@ -88,16 +100,14 @@ function SEO({ description, url, lang, meta, title, image }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  url: 'charlyecastro.com',
+  url: 'https://charlyecastro.com',
   description: `Charlye Castro is a Seattle based Software Engineer, experienced in web and mobile development`,
-  image: "../images/logo.png"
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   url: PropTypes.string,
-  image: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 }

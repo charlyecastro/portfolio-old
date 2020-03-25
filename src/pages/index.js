@@ -9,7 +9,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from "../components/contact"
 import Card from "../components/card"
-import BeaconCard from "../components/cards/beaconCard.js"
 import image from "../images/logo.png"
 
 

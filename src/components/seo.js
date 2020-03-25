@@ -8,10 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import Logo from "../images/logo.png"
+import Logo from "../images/favicon.png"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, url, lang, meta, title, image }) {
+function SEO({ description, url, lang, meta, title,  }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -49,6 +49,10 @@ function SEO({ description, url, lang, meta, title, image }) {
         {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: `og:url`,
+          content: url,
         },
         {
           property: `og:description`,

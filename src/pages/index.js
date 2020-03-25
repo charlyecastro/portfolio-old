@@ -10,7 +10,7 @@ import SEO from "../components/seo"
 import Contact from "../components/contact"
 import Card from "../components/card"
 import BeaconCard from "../components/cards/beaconCard.js"
-import image from "../images/favicon.png"
+import image from "../images/logo.png"
 
 
 const IndexPage = ({data}) => (

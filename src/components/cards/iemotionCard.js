@@ -1,16 +1,20 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import Card from "../card"
-import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 
-
-const IemotionCard = ({data}) => {
+const IemotionCard = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    iEmotionCard: file(relativePath: 
+    { eq: "iEmotionCard.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`)
 
     return (
         <>
@@ -18,21 +22,5 @@ const IemotionCard = ({data}) => {
         </>
     )
 }
-
-IemotionCard.propTypes = {
-    data : PropTypes.object.isRequired,
-  };
-  
-  export const query = graphql`
-  {
-    iEmotionCard : file(relativePath : {eq: "iEmotionCard.png"}) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-  `;
 
 export default IemotionCard

@@ -6,12 +6,13 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Card from "../components/card"
 import Description from "../components/description"
 import Intro from "../components/intro"
 import Tools from "../components/tools"
 import Overview from "../components/overview"
 import Takeaway from "../components/takeaway"
+import BeaconCard from "../components/cards/beaconCard"
+import CharadeCard from "../components/cards/charadeCard"
 
 const Limeade = ({ data }) => (
 
@@ -40,8 +41,9 @@ const Limeade = ({ data }) => (
       <div className="contained section-spacing" >
         <h4 className="content-spacing">Similar Work</h4>
         <div className="row" style={{ justifyContent: "center" }}>
-          <Card link="/charade" name="Charade" position="Full Stack Developer" date="Fall 2018" img={data.videocharadeCard.childImageSharp.fluid} colorOne="#53A59C" colorTwo="#8BD1CB" />
-          <Card link="/beacon" name="Beacon" position="Mobiile Developer" date="Spring 2019" img={data.beaconCard.childImageSharp.fluid} colorOne="#4A90E2" colorTwo="#81C3F3" />
+          <CharadeCard/>
+          <BeaconCard/>
+
         </div>
       </div>
     </section>
@@ -54,20 +56,6 @@ Limeade.propTypes = {
 
 export const query = graphql`
 {
-  beaconCard : file(relativePath : {eq: "beaconCard.png"}) {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  videocharadeCard : file(relativePath : {eq: "videocharadeCard.png"}) {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
   limeadeInterns : file(relativePath : {eq: "interns.png"}) {
     childImageSharp {
       fluid(maxWidth: 1000) {

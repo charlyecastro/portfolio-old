@@ -6,12 +6,14 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Card from "../components/card"
 import Description from "../components/description"
 import Intro from "../components/intro"
 import Tools from "../components/tools"
 import Overview from "../components/overview"
 import Takeaway from "../components/takeaway"
+import EarlybirdCard from "../components/cards/earlybirdCard"
+import LimeadeCard from "../components/cards/limeadeCard"
+
 
 
 const Limeade = ({ data }) => (
@@ -39,8 +41,8 @@ const Limeade = ({ data }) => (
       <div className="contained section-spacing" >
         <h4 className="content-spacing">Similar Work</h4>
         <div className="row" style={{ justifyContent: "center" }}>
-          <Card link="/limeade" name="Limeade" position="Intern" date="Summer 2019" img={data.limeadeCard.childImageSharp.fluid} colorOne="#29A63C" colorTwo="#53D26F" />
-          <Card link="/earlybird" name="earlybird" position="Mobile Developer" date="Spring 2019" img={data.earlybirdCard.childImageSharp.fluid} colorOne="#FFE48B" colorTwo="#FFF3BF" />
+          <LimeadeCard/>
+          <EarlybirdCard/>
         </div>
       </div>
     </section>
@@ -61,20 +63,6 @@ export const query = graphql`
     }
   }
   beaconMockup : file(relativePath : {eq: "beaconMockup.jpg"}) {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  limeadeCard : file(relativePath : {eq: "limeadeCard.png"}) {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  earlybirdCard : file(relativePath : {eq: "earlybirdCard.png"}) {
     childImageSharp {
       fluid(maxWidth: 1000) {
         ...GatsbyImageSharpFluid

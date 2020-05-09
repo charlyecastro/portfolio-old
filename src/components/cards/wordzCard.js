@@ -1,32 +1,24 @@
-
-
 import React from "react"
 import Card from "../card"
-import { graphql } from "gatsby"
-import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 
-
-const WordzCard = (data) => (
-    <>
-        <Card link="/wordz" name="Wordz" position="Web Developer" date="Fall 2017" img={data.test.childImageSharp.fluid} colorOne="#486FAA" colorTwo="#7EA8D5" />
-    </>
-  )
-
-
-  WordzCard.propTypes = {
-  data: PropTypes.object.isRequired,
-};
-
-export const query = graphql`
-  {
-    test : file(relativePath : {eq: "wordzCard.png"}) {
+const WordzCard = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    wordzCard: file(relativePath: 
+    { eq: "wordzCard.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
         }
       }
     }
   }
-  `;
+`)
+   return( <>
+        <Card link="/wordz" name="Wordz" position="Web Developer" date="Fall 2017" img={data.wordzCard.childImageSharp.fluid} colorOne="#486FAA" colorTwo="#7EA8D5" />
+    </>
+  )
+}
 
 export default WordzCard

@@ -21,7 +21,7 @@ const Contact = () => {
                     <label htmlFor = "email">Email</label>
                     <input id = "email" type = "text" name="_replyto" placeholder = "spidey@avengers.com"></input>
                     <label htmlFor= "message">Message</label>
-                    <textarea id = "message" name="message" placeholder=" Hi Charlye" rows = {4}></textarea>
+                    <textarea id = "message" name="message" placeholder="Welcome to the Avengers, Charlye!" rows = {4}></textarea>
                     <input type="submit" value="Send"></input>
                 </form>
                 </div>

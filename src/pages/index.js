@@ -28,15 +28,11 @@ const IndexPage = ({ data }) => {
       <div className="contained" style={{
         display: "flex", alignItems: "center", height: "100vh", justifyContent: "center",
       }}>
-
         <section id="hi"  >
-
-
           <div style={{ position: "relative" }} >
             <div className="hi-container">
               <h5 className="hiStyle" >Hi, I'm</h5>
             </div>
-
             <video muted autoPlay loop>
               <source src={waveWebm} type="video/webm" />
               <source src={waveMp4} type="video/mp4" />
@@ -51,11 +47,7 @@ const IndexPage = ({ data }) => {
                 <Link to="/#contact"> <button > Let's Talk</button> </Link>
               </div>
             </div>
-
           </div>
-
-          {/* </div> */}
-
         </section>
       </div>
       <section id="about" className="contained ">
@@ -63,8 +55,7 @@ const IndexPage = ({ data }) => {
         <div className="row rowTest">
           <div className="col-md-6 col-sm-12 col content-spacing">
             <h3 className="">My Story</h3>
-
-            <p className="content-spacing" style={{ lineHeight: "2.0" }}>I’m Charlye Castro, I recently graduated from the <a id="pTest" href="#"> University of Washington</a>, where I majored in Informatics, focused on Software Engineering. I am currently in Seattle, but I grew up in <a id="pTest" href="#"> Manson, Washington</a>, a small town located on the shores of Lake Chelan. As a way to keep in touch, I am freelancing for local companies in my hometown. However, this past summer I interned at Limeade as a mobile developer. Im most experienced in full stack and mobile development, but aside from tech, I have many other passions that I invest my time into. If you’re interested, go ahead and check out my<a id="pTest" href={PDF} target="_blank"> Resume!</a>  </p>
+            <p className="content-spacing" style={{ lineHeight: "2.0" }}>I’m Charlye Castro, I recently graduated from the <a id="pTest" href="https://www.washington.edu/"> University of Washington</a>, where I majored in <a id="pTest" href="https://ischool.uw.edu/programs/informatics" >Informatics </a>, focused on Software Engineering. I am currently in Seattle, but I grew up in <a id="pTest" href="https://moretomanson.com/"> Manson, Washington</a>, a small town located on the shores of Lake Chelan. As a way to keep in touch, I am freelancing for local companies in my hometown. However, this past summer I interned at Limeade as a mobile developer. Im most experienced in full stack and mobile development, but aside from tech, I have many other passions that I invest my time into. If you’re interested, go ahead and check out my<a id="pTest" href={PDF} target="_blank"> Resume!</a>  </p>
           </div>
           <div className="col-md-6 col-sm-12 col-12 content-spacing ">
             <Img className="picture content-spacing" fluid={data.profilePic.childImageSharp.fluid} alt="image name" />
@@ -81,7 +72,7 @@ const IndexPage = ({ data }) => {
       </section>
       <section id="work" className="workSection">
         <div className="contained section-spacing" >
-          <h2 className="content-spacing sectionTitle">Work</h2>
+          <h2 className="content-spacing sectionTitle">My Work</h2>
           <div className="row" style={{ justifyContent: "center" }}>
             <LimeadeCard />
             <BeaconCard />

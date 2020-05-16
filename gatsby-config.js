@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Software Engineer`,
-    description: `Charlye Castro is a Seattle based Software Engineer, experienced in web and mobile development`,
+    title: `Charlye Castro`,
+    description: `Charlye Castro is a Seattle based Software Engineer, experienced in web and mobile development. Currently Freelancing for local small business during Covid.`,
     url: "https://charlyecastro.com", 
     image: "/src/images/logo.png",
-    keywords : `Charlye Castro, Software Engineer, Web Developer, Mobile Developer, Seattle, Manson, Washington, Limeade`,
+    keywords : `Charlye Castro, Software Engineer, Web Developer, Mobile Developer, Full Stack Developer, React, Freelancing, Seattle, Manson, Washington`,
     author: `Charlye Castro`,
   },
   plugins: [

@@ -12,8 +12,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from "../components/contact"
 import image from "../images/logo.png"
-import waveWebm from "../images/waves.webm"
-import waveMp4 from "../images/waves.mp4"
 import EarlybirdCard from "../components/cards/earlybirdCard"
 import BeaconCard from "../components/cards/beaconCard"
 import CharadeCard from "../components/cards/charadeCard"
@@ -28,7 +26,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Charlye" image={image} />
+      <SEO title="Software Engineer" image={image} />
       <div className="contained" style={{
         display: "flex", alignItems: "center", height: "100vh", justifyContent: "center",
       }}>
@@ -37,13 +35,7 @@ const IndexPage = ({ data }) => {
             <div className="hi-container">
               <h5 className="hiStyle" >Hi, I'm</h5>
             </div>
-            <video muted autoPlay loop>
-              <source src={waveWebm} type="video/webm" />
-              <source src={waveMp4} type="video/mp4" />
-            </video>
-            <div className="title-container">
               <h1 className="titleStyle">  Charlye  </h1>
-            </div>
             <div className="hero-group-text">
               <h3 className="hero-subhead">I like to build cool stuff</h3>
               <p className="hero-description">Seattle based Software Engineer, experienced in web and mobile development. Currently seeking dev opporunities, so feel free to get in touch! </p>
@@ -83,7 +75,7 @@ const IndexPage = ({ data }) => {
 
       
           <h2 className="content-spacing sectionTitle">Additional Work</h2>
-          <div className="row" style={{ justifyContent: "center" }}>
+          <div className="card-grid" >
             <LimeadeCard />
             <BeaconCard />
             <EarlybirdCard />

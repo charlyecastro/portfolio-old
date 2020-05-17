@@ -125,7 +125,6 @@ position: relative;
   padding: 0px;
   background-color: #FFFFFF;
   border-radius: 5px;
-  margin: 1rem;
   width: 100%;
   /* width: 50vw;
   height: 50vh; */
@@ -276,7 +275,7 @@ opacity: .5;
 
 .workSection {
   background-color: #FAFAFA;
-  width: "100%"
+  margin-bottom: 2rem;
 }
 
 .contained {

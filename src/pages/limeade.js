@@ -40,7 +40,7 @@ const Limeade = ({ data }) => (
     <section id="work" className="workSection ">
       <div className="contained section-spacing" >
         <h4 className="content-spacing">Similar Work</h4>
-        <div className="row" style={{ justifyContent: "center" }}>
+        <div className="card-grid">
           <CharadeCard/>
           <BeaconCard/>
 

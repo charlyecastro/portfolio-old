@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import PFImg from "../images/PerezMockup.png"
 import JMPImg from "../images/jmpMockup.png"
 
-import PDF from "../files/resume.pdf"
+import PDF from "../files/Charlye-Castro-Resume.pdf"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
         <h3 className="">My Story</h3>
         <div className="row rowTest">
           <div className="col-md-6 col-sm-12 col ">
-            <p className="content-spacing" style={{ lineHeight: "2.0" }}>I’m Charlye Castro, I recently graduated from the <a id="pTest" href="https://www.washington.edu/"> University of Washington</a>, where I majored in <a id="pTest" href="https://ischool.uw.edu/programs/informatics" >Informatics</a>, focused on Software Engineering. I am currently in Seattle, but I grew up in <a id="pTest" href="https://moretomanson.com/"> Manson, Washington</a>, a small town located on the shores of Lake Chelan. As a way to keep in touch, I am freelancing for local companies in my hometown. However, this past summer I interned at Limeade as a mobile developer. Im most experienced in full stack and mobile development, but aside from tech, I have many other passions that I invest my time into. If you’re interested, go ahead and check out my<a id="pTest" href={PDF} target="_blank"> Resume!</a>  </p>
+            <p className="content-spacing" style={{ lineHeight: "2.0" }}>I’m Charlye Castro, I recently graduated from the <a id="pTest" href="https://www.washington.edu/"> University of Washington</a>, where I majored in <a id="pTest" href="https://ischool.uw.edu/programs/informatics" >Informatics</a>, focused on Software Engineering. I am currently in Seattle, but I grew up in <a id="pTest" href="https://moretomanson.com/"> Manson, Washington</a>, a small town located on the shores of Lake Chelan. As a way to keep in touch, I am freelancing for local companies in my hometown. However, this past summer I interned at Limeade as a mobile developer. Im most experienced in full stack and mobile development, but aside from tech, I have many other passions that I invest my time into. If you’re interested, go ahead and check out my <a id="pTest" href={PDF} target="_blank" rel="noopener noreferrer">Resume!</a>  </p>
           </div>
           <div className="col-md-6 col-sm-12 col-12 content-spacing ">
             <Img className="picture content-spacing" fluid={data.profilePic.childImageSharp.fluid} alt="image name" />

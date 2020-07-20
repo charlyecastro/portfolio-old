@@ -8,7 +8,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import PDF from "../files/resume.pdf"
+import PDF from "../files/Charlye-Castro-Resume.pdf"
 
 // const Navbar = () => {
 class Sidebar extends React.Component {
@@ -38,7 +38,7 @@ class Sidebar extends React.Component {
                     <p className="sideLinkStyle">contact</p>
                         </Link>
 
-                    <a onClick={this.props.handleLinkClick} className="sideLinkContainer" href={PDF} target="_blank">
+                    <a onClick={this.props.handleLinkClick} className="sideLinkContainer" href={PDF} target="_blank" rel="noopener noreferrer">
                     <i className="fa fa-file fa-lg iconStyle" />
                     <p className="sideLinkStyle">resume</p>
                         </a>

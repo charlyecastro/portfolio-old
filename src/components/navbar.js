@@ -8,7 +8,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import PDF from "../files/resume.pdf"
+import PDF from "../files/Charlye-Castro-Resume.pdf"
 import Sidebar from "./sidebar"
 
 
@@ -80,7 +80,7 @@ class Navbar extends React.Component {
 
                         <div style={{ alignSelf: "center", justifyContent: "flex-end",
  }}>
-                            <a id="burger" className={this.state.isOpen ? "toggle" : ""} onClick={this.toggleSidebar}>
+                            <a id="burger" href = "/#" className={this.state.isOpen ? "toggle" : ""} onClick={this.toggleSidebar}>
                                 <span ></span>
                                 <span ></span>
                             </a>
@@ -91,7 +91,7 @@ class Navbar extends React.Component {
                             <Link className="linkStyle" to="/#about">about </Link>
                             <Link className="linkStyle" to="/#work">work </Link>
                             <Link className="linkStyle" to="/#contact">contact </Link>
-                            <a className="linkStyle" href={PDF} target="_blank">resume </a>
+                            <a className="linkStyle" href={PDF} target="_blank" rel="noopener noreferrer">resume</a>
                         </div>
                     </div>
                     <Sidebar isOpen={this.state.isOpen} handleLinkClick={this.linkClicked} />

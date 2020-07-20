@@ -18,8 +18,8 @@ import "../../node_modules/font-awesome/css/font-awesome.min.css"
 const Layout = ({ children }) => {
 
    useEffect(() => {
-    gsap.to("html", 0, { css: { visibility: "visible" } })
-    gsap.to(".layout-container", 0, { css: { visibility: "visible" } })
+    // gsap.to("html", 0, { css: { visibility: "visible" } })
+    // gsap.to(".layout-container", 0, { css: { visibility: "visible" } })
     gsap.to("body", 0, { css: { visibility: "visible" } })
 
     const tl = new TimelineLite()

@@ -7,8 +7,6 @@
 
 import React from "react"
 
-import { Link } from "gatsby"
-
 const FeaturedWork = ({ title, description, categories, img, link, primaryColor }) => {
 
     return (
@@ -16,7 +14,7 @@ const FeaturedWork = ({ title, description, categories, img, link, primaryColor 
             <div className="featured">
  
                 <div>
-                    <img className="featured-img" src={img} />
+                    <img className="featured-img" src={img} alt = {description} />
                 </div>
                 <div className="featured-description">
                     <div className="featured-group-text">
